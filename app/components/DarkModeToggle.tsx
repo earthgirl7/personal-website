@@ -4,7 +4,12 @@ import { useState, useEffect } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const DarkModeToggle: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("darkMode") === "true";
+    }
+    return false;
+  });
 
   useEffect(() => {
     const body = document.body;
@@ -13,6 +18,7 @@ const DarkModeToggle: React.FC = () => {
     } else {
       body.classList.remove("dark-mode");
     }
+    localStorage.setItem("darkMode", isDarkMode.toString());
   }, [isDarkMode]);
 
   const toggleMode = () => {

@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Josefin_Sans } from "next/font/google";
+import { JetBrains_Mono, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
-const josefinSans = Josefin_Sans({ subsets: ["latin"] });
+const josefinSans = Josefin_Sans({
+  subsets: ["latin"],
+  variable: "--font-josefin-sans",
+});
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
 
 export const metadata: Metadata = {
   title: "Alter Anosha",
@@ -16,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={josefinSans.className}>{children}</body>
+      <body className={`${josefinSans.className} ${jetBrainsMono.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -17,12 +17,16 @@ const getBlogData = () => {
 
     return {
       id: data.id,
+      hashtag: data.hashtag,
       title: data.title,
       date: data.date,
       content,
     };
   });
 
+  blogsData.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
   return blogsData;
 };
 

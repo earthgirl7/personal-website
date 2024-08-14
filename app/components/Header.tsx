@@ -1,23 +1,24 @@
 import Head from "next/head";
 import DarkModeToggle from "./DarkModeToggle";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
     <header className="py-6 px-4">
       <div className="container mx-auto flex justify-between items-center">
-        <a className="text-xl font-sans" href="/">
+        <Link className="text-xl font-sans hover:text-hover-color" href="/">
           ANOSHA
-        </a>
+        </Link>
 
         <nav className="flex justify-center flex-grow">
           <ul className="flex space-x-4">
             <li className="border-r border-gray-400 pr-4 ">
-              <a
+              <Link
                 href="/blog"
-                className=" font-light hover:text-gray-800 font-sans"
+                className=" font-light hover:text-hover-color font-sans"
               >
-                BLOG
-              </a>
+                WRITINGS
+              </Link>
             </li>
             {/* work in progress */}
             {/* <li className="border-r border-gray-400 pr-4">
@@ -29,12 +30,12 @@ const Header: React.FC = () => {
               </a>
             </li> */}
             <li>
-              <a
+              <Link
                 href="/about"
-                className="font-light hover:text-gray-800 font-sans"
+                className="font-light hover:text-hover-color font-sans"
               >
                 STORY
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

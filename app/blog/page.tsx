@@ -7,6 +7,13 @@ import Link from "next/link";
 import blogData from "./blogData";
 
 const BlogList = () => {
+  const hashtagColors: { [key: string]: string } = {
+    "#poem": "text-blue-500",
+    "#research": "text-green-700",
+    "#experience": "text-pink-500",
+    // Add more hashtags and their corresponding color classes
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -25,9 +32,7 @@ const BlogList = () => {
               key={blog.id}
             >
               <div className="flex items-center py-4 group">
-                <div className="mr-10 group-hover:text-gray-500">#hashtag</div>
-                <div className="flex-1 flex justify-between items-center">
-                  <div className="ml-2 group-hover:text-gray-500">
+                    hashtagColors[blog.hashtag] || "text-gray-500"
                     {blog.title}
                   </div>
                   <div className="whitespace-nowrap group-hover:text-gray-500">

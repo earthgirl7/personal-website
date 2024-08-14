@@ -6,12 +6,17 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 217, 217, 217;
   --background-end-rgb: 230, 230, 230;
+  --hover-color: 145,143,143;
+  --hr-color: black;
 }
 
-.dark-mode {
+
+/* TODO: adapt dark mode to system settings */
+.dark-mode { 
   --foreground-rgb: 217, 217, 217;
   --background-start-rgb: 25, 23, 23;
   --background-end-rgb: 25, 23, 23;
+  --hr-color: 217, 217, 217;
 }
 
 body {
@@ -30,6 +35,7 @@ body {
     text-wrap: balance;
   }
 }
+
 
 
 /* @media (prefers-color-scheme: dark) {

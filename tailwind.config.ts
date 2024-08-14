@@ -17,6 +17,9 @@ const config: Config = {
         mono: ["var(--font-jetbrains-mono)"],
         sans: ["var(--font-josefin-sans)"],
       },
+      colors: {
+        "hover-color": "rgb(var(--hover-color))",
+      },
     },
   },
   plugins: [],

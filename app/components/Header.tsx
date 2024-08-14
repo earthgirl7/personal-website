@@ -19,14 +19,15 @@ const Header: React.FC = () => {
                 BLOG
               </a>
             </li>
-            <li className="border-r border-gray-400 pr-4">
+            {/* work in progress */}
+            {/* <li className="border-r border-gray-400 pr-4">
               <a
                 href="/projects"
                 className="font-light hover:text-gray-800 font-sans"
               >
                 PROJECTS
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="/about"

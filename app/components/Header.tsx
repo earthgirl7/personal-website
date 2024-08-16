@@ -2,9 +2,13 @@ import Head from "next/head";
 import DarkModeToggle from "./DarkModeToggle";
 import Link from "next/link";
 
-const Header: React.FC = () => {
+const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
+  const headerClasses = `py-6 px-4 ${
+    isFixed ? "fixed top-0 left-0 right-0 z-10" : ""
+  }`;
+
   return (
-    <header className="py-6 px-4">
+    <header className={headerClasses}>
       <div className="container mx-auto flex justify-between items-center">
         <Link className="text-xl font-sans hover:text-hover-color" href="/">
           ANOSHA

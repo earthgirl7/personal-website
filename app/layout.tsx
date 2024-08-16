@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import StickyDotCursor from "./components/StickyDotCursor";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${josefinSans.className} ${jetBrainsMono.variable}`}>
         {children}
+        <StickyDotCursor />
       </body>
     </html>
   );

@@ -1,14 +1,61 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const About = () => {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [opacity, setOpacity] = useState(1);
+  const texts = [
+    "Welcome to my digital corner.",
+    "Explore my journey.",
+    "Discover my passions.",
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const newIndex = Math.min(
+        Math.floor(scrollPosition / 300),
+        texts.length - 1
+      );
+      setCurrentTextIndex(newIndex);
+      // Calculate opacity based on scroll position
+      const sectionStart = newIndex * 300;
+      const sectionEnd = sectionStart + 300;
+      const progress =
+        (scrollPosition - sectionStart) / (sectionEnd - sectionStart);
+
+      // Fade in from 0 to 1 in the first 20%, stay at 1 until 80%, then fade out
+      let newOpacity;
+      if (progress < 0.2) {
+        newOpacity = progress / 0.2;
+      } else if (progress > 0.8) {
+        newOpacity = 1 - (progress - 0.8) / 0.2;
+      } else {
+        newOpacity = 1;
+      }
+
+      setOpacity(Math.max(0, Math.min(1, newOpacity)));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [texts.length]);
+
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <main className="flex-grow">
-        <div className="h-screen flex items-center justify-center">
-          <h1 className="text-4xl font-semi-light">Welcome to my world.</h1>
+        <Header isFixed={true} />
+        <div className="h-[200vh]">
+          <div className="sticky top-0 h-screen flex items-center justify-center">
+            <h1
+              className="text-4xl font-semi-light"
+              style={{ opacity: opacity }}
+            >
+              {texts[currentTextIndex]}
+            </h1>
+          </div>
         </div>
         <div className="">
           <div className="h-screen flex items-center justify-center">

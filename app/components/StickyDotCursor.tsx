@@ -5,7 +5,7 @@ const StickyDotCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setTimeout(() => {
         setPosition({ x: e.clientX, y: e.clientY });
       }, 50);

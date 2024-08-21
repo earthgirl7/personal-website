@@ -13,14 +13,14 @@ export default function BlogPost({
 }) {
   const post = blogData.find((post) => post.id === params.slug);
   const components = {
-    h1: ({ node, ...props }: { node: any; [key: string]: any }) => (
-      <h1 className="text-2xl font-bold mb-4 mt-7" {...props} />
+    h1: ({ children, ...props }: React.HTMLProps<HTMLHeadingElement>) => (
+      <h1 {...props}>{children}</h1>
     ),
-    h2: ({ node, ...props }: { node: any; [key: string]: any }) => (
-      <h2 className="text-xl font-semibold mb-3 mt-5" {...props} />
+    h2: ({ children, ...props }: React.HTMLProps<HTMLHeadingElement>) => (
+      <h2 {...props}>{children}</h2>
     ),
-    h3: ({ node, ...props }: { node: any; [key: string]: any }) => (
-      <h3 className="text-lg font-medium mb-2 mt-4" {...props} />
+    h3: ({ children, ...props }: React.HTMLProps<HTMLHeadingElement>) => (
+      <h3 {...props}>{children}</h3>
     ),
   };
 

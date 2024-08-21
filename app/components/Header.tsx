@@ -24,21 +24,20 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                 WRITINGS
               </Link>
             </li>
-            {/* work in progress */}
-            {/* <li className="border-r border-gray-400 pr-4">
-              <a
-                href="/projects"
-                className="font-light hover:text-gray-800 font-sans"
-              >
-                PROJECTS
-              </a>
-            </li> */}
-            <li>
+            <li className="border-r border-gray-400 pr-4">
               <Link
                 href="/about"
                 className="font-light hover:text-hover-color font-sans"
               >
-                STORY
+                ABOUT
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://anosharahim.github.io/resume/"
+                className="font-light hover:text-hover-color font-sans"
+              >
+                RESUME
               </Link>
             </li>
           </ul>

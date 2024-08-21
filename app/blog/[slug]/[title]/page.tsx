@@ -13,13 +13,13 @@ export default function BlogPost({
 }) {
   const post = blogData.find((post) => post.id === params.slug);
   const components = {
-    h1: ({ node, ...props }) => (
+    h1: ({ node, ...props }: { node: any; [key: string]: any }) => (
       <h1 className="text-2xl font-bold mb-4 mt-7" {...props} />
     ),
-    h2: ({ node, ...props }) => (
+    h2: ({ node, ...props }: { node: any; [key: string]: any }) => (
       <h2 className="text-xl font-semibold mb-3 mt-5" {...props} />
     ),
-    h3: ({ node, ...props }) => (
+    h3: ({ node, ...props }: { node: any; [key: string]: any }) => (
       <h3 className="text-lg font-medium mb-2 mt-4" {...props} />
     ),
   };

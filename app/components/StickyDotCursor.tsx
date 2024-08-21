@@ -8,7 +8,7 @@ const StickyDotCursor = () => {
     const handleMouseMove = (e) => {
       setTimeout(() => {
         setPosition({ x: e.clientX, y: e.clientY });
-      }, 200);
+      }, 50);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -20,7 +20,7 @@ const StickyDotCursor = () => {
 
   return (
     <div
-      className="fixed w-3 h-3 bg-gray-500 rounded-full pointer-events- transition-all duration-300 ease-out z-40"
+      className="fixed w-3 h-3 bg-gray-500 rounded-full pointer-events-none transition-all duration-300 ease-out z-40"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

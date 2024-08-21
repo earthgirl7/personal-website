@@ -6,11 +6,18 @@ import Footer from "../components/Footer";
 
 const About = () => {
   const [ringSize, setRingSize] = useState(0);
+  const maxDiameter = 100;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRingSize((prevSize) => Math.min(prevSize + 1, 200));
-    }, 50);
+      setRingSize((prevSize) => {
+        if (prevSize < maxDiameter) {
+          return prevSize + 1;
+        }
+        clearInterval(interval);
+        return prevSize;
+      });
+    }, 250);
     return () => clearInterval(interval);
   }, []);
 
@@ -42,10 +49,12 @@ const About = () => {
       <main className="flex-grow">
         <div className="fixed inset-0 pointer-events-none overflow-hidden">
           <div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full border border-white"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
             style={{
               width: `${ringSize}vw`,
               height: `${ringSize}vw`,
+              background:
+                "radial-gradient(circle, transparent 51%, rgba(255,105,180,0.5) 50%, rgba(255,105,180,0.5) 51%, transparent 52%)",
               transition: "all 0.5s ease-out",
             }}
           />

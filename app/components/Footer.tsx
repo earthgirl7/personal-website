@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="fixed bottom-0 left-0 right-0 py-4 px-4 ">
       <div className=" flex justify-center">
-        <div className="flex justify-center space-x-4 mb-3 bg-gray-100 p-2 rounded-lg opacity-50">
+        <div className="flex justify-center space-x-4 mb-3 p-2 rounded-lg opacity-80">
           <a
             href="https://github.com/anosharahim"
             target="_blank"

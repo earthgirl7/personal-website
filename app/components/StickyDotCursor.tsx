@@ -20,7 +20,7 @@ const StickyDotCursor = () => {
 
   return (
     <div
-      className="fixed w-3 h-3 bg-gray-500 rounded-full pointer-events-none transition-all duration-300 ease-out z-40"
+      className="fixed w-3 h-3 bg-pink-500 rounded-full pointer-events-none transition-all duration-300 ease-out z-40"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

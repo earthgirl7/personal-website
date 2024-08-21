@@ -3,9 +3,17 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+
 const About = () => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [opacity, setOpacity] = useState(1);
+  const [ringSize, setRingSize] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRingSize((prevSize) => Math.min(prevSize + 1, 200));
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
+
   const texts = [
     "welcome to my digital corner",
     "where I share who I am",
@@ -32,6 +40,16 @@ const About = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
+        <div className="fixed inset-0 pointer-events-none overflow-hidden">
+          <div
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full border border-white"
+            style={{
+              width: `${ringSize}vw`,
+              height: `${ringSize}vw`,
+              transition: "all 0.5s ease-out",
+            }}
+          />
+        </div>
         <Header isFixed={true} />
         <div className="h-[100vh]">
           <div className="sticky top-0 h-screen flex items-center justify-center">
@@ -39,11 +57,11 @@ const About = () => {
               {texts.map((text, index) => (
                 <h1 key={index} className="text-4xl font-semi-light">
                   {text}
-            </h1>
+                </h1>
               ))}
             </div>
           </div>
-              </div>
+        </div>
 
         {principles.map((principle, index) => (
           <div

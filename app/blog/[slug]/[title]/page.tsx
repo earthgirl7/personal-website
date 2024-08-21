@@ -28,13 +28,28 @@ export default function BlogPost({
     return <div>Post not found</div>;
   }
 
+  const hashtagColors: { [key: string]: string } = {
+    "#poem": "text-blue-500",
+    "#research": "text-green-700",
+    "#experience": "text-pink-500",
+    // Add more hashtags and their corresponding color classes
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow py-16 pb-[25rem] pt-32 flex justify-center">
         <div className="w-2/5">
+          <p
+            className={`mb-10 ${
+              hashtagColors[post.hashtag] || "text-gray-500"
+            }`}
+          >
+            {" "}
+            {post.hashtag}
+          </p>
           <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-          <p className="text-gray-500 mb-4">{post.date}</p>
+          <p className="text-gray-500 mb-10">{post.date}</p>
           {/* <div dangerouslySetInnerHTML={{ __html: post.content }} /> */}
           <div className="leading-[2.5] font-light ">
             <ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>

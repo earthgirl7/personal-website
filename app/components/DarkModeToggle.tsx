@@ -35,9 +35,9 @@ const DarkModeToggle: React.FC = () => {
       onClick={toggleMode}
     >
       {isDarkMode ? (
-        <FaSun className="text-[var(--foreground-rgb)]" />
+        <FaSun className="text-[var(--foreground-rgb)] hover:text-gray-500" />
       ) : (
-        <FaMoon className="text-[var(--foreground-rgb)]" />
+        <FaMoon className="text-[var(--foreground-rgb)] hover:text-gray-500" />
       )}
     </button>
   );

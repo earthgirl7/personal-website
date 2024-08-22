@@ -6,6 +6,8 @@ import { useState } from "react";
 
 const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(false);
+
   const headerClasses = `py-0 sm:py-6 px-0 sm:px-4 ${
     isFixed ? "fixed top-0 left-0 right-0 z-10" : ""
   } `;
@@ -17,7 +19,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
           className="md:hidden text-3xl p-4"
           onClick={() => {
             setIsMenuOpen(!isMenuOpen);
-            
+            setIsBlurred(!isBlurred);
           }}
         >
           ☰
@@ -38,35 +40,44 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
               }`}
             >
               <li className="md:border-r md:border-gray-400 md:pr-4">
-              <Link
-                href="/blog"
-                className=" font-light hover:text-hover-color font-sans"
-              >
-                WRITINGS
-              </Link>
-            </li>
+                <Link
+                  href="/blog"
+                  className=" font-light hover:text-hover-color font-sans"
+                >
+                  WRITINGS
+                </Link>
+              </li>
               <li className="md:border-r md:border-gray-400 md:pr-4">
-              <Link
-                href="/about"
-                className="font-light hover:text-hover-color font-sans"
-              >
-                ABOUT
-              </Link>
-            </li>
+                <Link
+                  href="/about"
+                  className="font-light hover:text-hover-color font-sans"
+                >
+                  ABOUT
+                </Link>
+              </li>
               <li className="">
-              <Link
-                href="https://anosharahim.github.io/resume/"
-                className="font-light hover:text-hover-color font-sans"
-              >
-                RESUME
-              </Link>
-            </li>
-          </ul>
-        </nav>
+                <Link
+                  href="https://anosharahim.github.io/resume/"
+                  className="font-light hover:text-hover-color font-sans"
+                >
+                  RESUME
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
 
         <DarkModeToggle />
       </div>
+      {isBlurred && (
+        <div
+          className="fixed inset-0 bg-white dark:bg-[var(--menu-bg-dark)] bg-opacity-80 backdrop-blur-md z-30"
+          onClick={() => {
+            setIsMenuOpen(false);
+            setIsBlurred(false);
+          }}
+        ></div>
+      )}
     </header>
   );
 };

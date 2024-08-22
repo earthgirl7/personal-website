@@ -1,22 +1,43 @@
+"use client";
 import Head from "next/head";
 import DarkModeToggle from "./DarkModeToggle";
 import Link from "next/link";
+import { useState } from "react";
 
 const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
-  const headerClasses = `py-6 px-4 ${
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headerClasses = `py-0 sm:py-6 px-0 sm:px-4 ${
     isFixed ? "fixed top-0 left-0 right-0 z-10" : ""
-  }`;
+  } `;
 
   return (
     <header className={headerClasses}>
       <div className="container mx-auto flex justify-between items-center">
+        <button
+          className="md:hidden text-3xl p-4"
+          onClick={() => {
+            setIsMenuOpen(!isMenuOpen);
+            
+          }}
+        >
+          ☰
+        </button>
+
         <Link className="text-xl font-sans hover:text-hover-color" href="/">
           ANOSHA
         </Link>
-
-        <nav className="flex justify-center flex-grow">
-          <ul className="flex space-x-4">
-            <li className="border-r border-gray-400 pr-4 ">
+        <div className="relative">
+          <nav
+            className={`md:flex justify-center flex-grow ${
+              isMenuOpen ? "block absolute top-full right-0" : "hidden"
+            }  md:relative md:block bg-[var(--foreground-rgb)] md:bg-transparent md:dark:bg-transparent z-50`}
+          >
+            <ul
+              className={`flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4 md:p-0 ${
+                isMenuOpen ? "w-64" : ""
+              }`}
+            >
+              <li className="md:border-r md:border-gray-400 md:pr-4">
               <Link
                 href="/blog"
                 className=" font-light hover:text-hover-color font-sans"
@@ -24,7 +45,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                 WRITINGS
               </Link>
             </li>
-            <li className="border-r border-gray-400 pr-4">
+              <li className="md:border-r md:border-gray-400 md:pr-4">
               <Link
                 href="/about"
                 className="font-light hover:text-hover-color font-sans"
@@ -32,7 +53,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                 ABOUT
               </Link>
             </li>
-            <li>
+              <li className="">
               <Link
                 href="https://anosharahim.github.io/resume/"
                 className="font-light hover:text-hover-color font-sans"
@@ -42,6 +63,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
             </li>
           </ul>
         </nav>
+        </div>
 
         <DarkModeToggle />
       </div>

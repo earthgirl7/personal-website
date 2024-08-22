@@ -62,7 +62,7 @@ const About = () => {
         <Header isFixed={true} />
         <div className="h-[100vh]">
           <div className="sticky top-0 h-screen flex items-center justify-center">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center px-4 sm:px-0">
               {texts.map((text, index) => (
                 <h1 key={index} className="text-4xl font-semi-light">
                   {text}
@@ -77,7 +77,7 @@ const About = () => {
             key={index}
             className="h-screen flex items-center justify-center"
           >
-            <div className="font-mono font-light w-1/3 max-w-2xl">
+            <div className="font-mono font-light w-full sm:w-1/3  px-4 sm:px-0 max-w-2xl">
               <div className="mb-2 text-xl">{principle.title}</div>
               <div>{principle.content}</div>
             </div>

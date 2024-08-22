@@ -25,9 +25,14 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
           ☰
         </button>
 
-        <Link className="text-xl font-sans hover:text-hover-color" href="/">
-          ANOSHA
-        </Link>
+        <div className="w-full md:w-auto">
+          <Link
+            className="text-xl font-sans hover:text-hover-color text-center md:text-left block"
+            href="/"
+          >
+            ANOSHA
+          </Link>
+        </div>
         <div className="relative">
           <nav
             className={`md:flex justify-center flex-grow ${

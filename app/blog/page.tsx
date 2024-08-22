@@ -18,7 +18,7 @@ const BlogList = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow py-16 flex justify-center">
-        <div className="w-1/2">
+        <div className="w-full p-4 sm:w-1/2">
           <div className="text-4xl flex justify-center font-sans">
             The Inside of My Brain
           </div>
@@ -31,19 +31,24 @@ const BlogList = () => {
               )}`}
               key={blog.id}
             >
-              <div className="flex items-center py-4 group">
-                <div
-                  className={`w-32 mr-10 group-hover:text-hover-color ${
-                    hashtagColors[blog.hashtag] || "text-gray-500"
-                  }`}
-                >
-                  {blog.hashtag}
+              <div className="flex flex-col sm:flex-row items-center py-4 group">
+                <div className="w-full sm:w-32 sm:mr-10 mb-2 sm:mb-0 order-first sm:order-none flex justify-between items-center">
+                  <div
+                    className={`group-hover:text-hover-color text-xs sm:text-base ${
+                      hashtagColors[blog.hashtag] || "text-gray-500"
+                    }`}
+                  >
+                    {blog.hashtag}
+                  </div>
+                  <div className="whitespace-nowrap group-hover:text-hover-color font-light text-xs sm:text-sm sm:hidden">
+                    {blog.date}
+                  </div>
                 </div>
-                <div className="flex-1 flex justify-between items-center font-light">
-                  <div className=" group-hover:text-hover-color">
+                <div className="w-full sm:flex-1 flex justify-between items-center font-light">
+                  <div className="group-hover:text-hover-color">
                     {blog.title}
                   </div>
-                  <div className="whitespace-nowrap group-hover:text-hover-color font-light">
+                  <div className="whitespace-nowrap group-hover:text-hover-color font-light text-xs sm:text-base hidden sm:block">
                     {blog.date}
                   </div>
                 </div>

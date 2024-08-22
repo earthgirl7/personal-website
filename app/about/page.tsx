@@ -6,19 +6,18 @@ import Footer from "../components/Footer";
 
 const About = () => {
   const [ringSize, setRingSize] = useState(0);
-  const maxDiameter = 100;
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setRingSize((prevSize) => {
-        if (prevSize < maxDiameter) {
-          return prevSize + 1;
-        }
-        clearInterval(interval);
-        return prevSize;
-      });
-    }, 250);
-    return () => clearInterval(interval);
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const documentHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = (scrollPosition / documentHeight) * 100;
+      setRingSize(scrollPercentage);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const texts = [
@@ -55,7 +54,7 @@ const About = () => {
               height: `${ringSize}vw`,
               background:
                 "radial-gradient(circle, transparent 51%, rgba(255,105,180,0.5) 50%, rgba(255,105,180,0.5) 51%, transparent 52%)",
-              transition: "all 0.5s ease-out",
+              transition: "all 0.1s ease-out",
             }}
           />
         </div>

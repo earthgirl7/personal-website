@@ -12,6 +12,18 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
     isFixed ? "fixed top-0 left-0 right-0 z-10" : ""
   } `;
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setSwipeStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (swipeStart - e.touches[0].clientX > 50) {
+      setIsMenuOpen(false);
+      setIsBlurred(false);
+    }
+  };
+
+  const [swipeStart, setSwipeStart] = useState(0);
   return (
     <header className={headerClasses}>
       <div className="container mx-auto flex justify-between items-center">
@@ -36,12 +48,16 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
         <div className="relative">
           <nav
             className={`md:flex justify-center flex-grow ${
-              isMenuOpen ? "block absolute top-full right-0" : "hidden"
-            }  md:relative md:block bg-[var(--foreground-rgb)] md:bg-transparent md:dark:bg-transparent z-50`}
+              isMenuOpen
+                ? "block fixed inset-0 flex text-xl font-bold"
+                : "hidden"
+            } md:relative md:block bg-[var(--foreground-rgb)] md:bg-transparent md:dark:bg-transparent z-50`}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
           >
             <ul
-              className={`flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4 md:p-0 ${
-                isMenuOpen ? "w-64" : ""
+              className={`flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-10 md:p-0 ${
+                isMenuOpen ? "w-full" : ""
               }`}
             >
               <li className="md:border-r md:border-gray-400 md:pr-4">
@@ -76,7 +92,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
       </div>
       {isBlurred && (
         <div
-          className="fixed inset-0 bg-white dark:bg-[var(--menu-bg-dark)] bg-opacity-80 backdrop-blur-md z-30"
+          className="fixed inset-0 bg-white dark:bg-[var(--menu-bg-dark)] bg-opacity-90 backdrop-blur-md z-30"
           onClick={() => {
             setIsMenuOpen(false);
             setIsBlurred(false);

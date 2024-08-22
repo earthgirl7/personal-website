@@ -39,7 +39,7 @@ export default function BlogPost({
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow py-16 pb-[25rem] pt-32 flex justify-center">
-        <div className="w-2/5">
+        <div className="w-full sm:w-2/5 px-4 ">
           <p
             className={`mb-10 ${
               hashtagColors[post.hashtag] || "text-gray-500"

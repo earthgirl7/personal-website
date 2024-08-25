@@ -68,7 +68,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                   WRITINGS
                 </Link>
               </li>
-              <li className="md:border-r md:border-gray-400 md:pr-4">
+              <li className=" md:pr-4">
                 <Link
                   href="/about"
                   className="font-light hover:text-hover-color font-sans"
@@ -76,14 +76,14 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                   ABOUT
                 </Link>
               </li>
-              <li className="">
+              {/* <li className="">
                 <Link
                   href="https://anosharahim.github.io/resume/"
                   className="font-light hover:text-hover-color font-sans"
                 >
                   RESUME
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

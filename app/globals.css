@@ -10,6 +10,9 @@
   --hr-color: black;
 }
 
+.markdown > * {
+  all: revert;
+}
 
 /* TODO: adapt dark mode to system settings */
 .dark-mode { 

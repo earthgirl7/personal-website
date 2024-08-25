@@ -50,9 +50,12 @@ export default function BlogPost({
           </p>
           <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
           <p className="text-gray-500 mb-10">{post.date}</p>
-          {/* <div dangerouslySetInnerHTML={{ __html: post.content }} /> */}
-          <div className="leading-[2.5] font-light ">
-            <ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>
+          <div className="leading-[2.5] font-light  ">
+            <ReactMarkdown
+              className="markdown"
+              components={components}
+              remarkPlugins={[remarkGfm]}
+            >
               {post.content}
             </ReactMarkdown>
           </div>

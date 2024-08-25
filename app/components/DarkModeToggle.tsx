@@ -27,7 +27,7 @@ const DarkModeToggle: React.FC = () => {
 
   return (
     <button
-      className={`px-5 py-1 rounded flex items-center justify-center ${
+      className={` py-1 rounded flex items-center justify-center ${
         isDarkMode
           ? "bg-[var(--foreground-rgb)] text-white"
           : "bg-[var(--foreground-rgb)] text-gray-800"

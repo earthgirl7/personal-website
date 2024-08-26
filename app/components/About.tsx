@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
+import Header from "./Header";
+import Footer from "./Footer";
 
 const About = () => {
   const [ringSize, setRingSize] = useState(0);
@@ -83,10 +82,8 @@ const About = () => {
           </div>
         ))}
       </main>
-      <Footer />
     </div>
   );
 };
 
 export default About;
-

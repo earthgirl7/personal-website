@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      {/* <Header /> */}
       <main className="pb-[1vh]">
         <div className="flex flex-grow container mx-auto pt-[35vh] pb-[40vh] items-center justify-center">
           <div className="text-center">

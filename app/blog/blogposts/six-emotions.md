@@ -1,11 +1,11 @@
 ---
 id: "2"
-hashtag: "#emotionAI"
-title: "Why do we think we have six emotions?"
+hashtag: "#rabbithole"
+title: "Origins of the Six Human Emotions"
 date: "August 10, 2024"
 ---
 
-For decades,  we have entertained the idea that humans have 6 basic emotions: anger, disgust, fear, sadness, surprise, and happiness. 
+For decades,  we have entertained the sidea that humans have 6 basic emotions: anger, disgust, fear, sadness, surprise, and happiness. 
 
 This concept has heavily influenced emotion-related science and innovation, but it seems too simplistic a model of human emotions. Surely we have a lot more emotions than six? 
 
@@ -70,6 +70,4 @@ A key project that Ekman goes on to develop using this theory is the Facial Acti
 - Unilever employed FACS-based facial recognition technology in 2011 to analyze consumer reactions to advertisements.
 
 It is clear that Ekman’s theory and the FACS project put order onto the complex and chaotic phenomenon of human emotion. It is certainly not the only theory of emotion out there, but it is one that is simple to explain, and convenient to systemize. In fact, it perfectly fits the supervised machine learning framework and comes at a time when we have facial expression data widely available in image format, which has lead to fueling a lot of early emotion recognition AI.
-
-### References
 

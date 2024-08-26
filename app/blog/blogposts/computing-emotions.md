@@ -1,7 +1,7 @@
 ---
 id: "4"
-hashtag: "#research"
-title: "Why emotion AI struggles with science"
+hashtag: "#rabbithole"
+title: "How Emotions Get Distored in AI"
 date: "August 20, 2024"
 ---
 Technology shapes our reality. 

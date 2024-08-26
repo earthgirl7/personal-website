@@ -60,7 +60,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                 isMenuOpen ? "w-full" : ""
               }`}
             >
-              <li className="md:border-r md:border-gray-400 md:pr-4">
+              <li className=" md:pr-4">
                 <Link
                   href="/blog"
                   className=" font-light hover:text-hover-color font-sans"
@@ -68,14 +68,14 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                   WRITINGS
                 </Link>
               </li>
-              <li className=" md:pr-4">
+              {/* <li className=" md:pr-4">
                 <Link
                   href="/about"
                   className="font-light hover:text-hover-color font-sans"
                 >
                   ABOUT
                 </Link>
-              </li>
+              </li> */}
               {/* <li className="">
                 <Link
                   href="https://anosharahim.github.io/resume/"

@@ -27,7 +27,7 @@ const DarkModeToggle: React.FC = () => {
 
   return (
     <button
-      className={` py-1 rounded flex items-center justify-center ${
+      className={` px-4 sm:px-0 rounded flex items-center justify-center ${
         isDarkMode
           ? "bg-[var(--foreground-rgb)] text-white"
           : "bg-[var(--foreground-rgb)] text-gray-800"
@@ -35,9 +35,9 @@ const DarkModeToggle: React.FC = () => {
       onClick={toggleMode}
     >
       {isDarkMode ? (
-        <FaSun className="text-[var(--foreground-rgb)] hover:text-gray-500" />
+        <FaSun className="text-[var(--foreground-rgb)] hover:text-hover-color" />
       ) : (
-        <FaMoon className="text-[var(--foreground-rgb)] hover:text-gray-500" />
+        <FaMoon className="text-[var(--foreground-rgb)] hover:text-hover-color" />
       )}
     </button>
   );

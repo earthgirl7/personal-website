@@ -59,7 +59,6 @@ When we collect emotion data, the emotion in question is decoupled from its cont
 
 If you give someone an image and ask them to tell you which emotion it is, and you only give them 5 options to pick from, you imply that these are all the emotions that exist. This is the *forced choice paradigm* that Paul Ekman’s early emotion recognition experiments suffered from. Similarly, when we ask actors to act out stereotypical representations of popular emotions, and then label these emotions respectively, we are forcing a specific emotion to be represented in the way we feel is appropriate.
 
-
--
+-----
 
 I find it a matter of principle that we strive to minimize distortion of the truth. But I don't have the answer to which way of thinking about emotion is closest to truth. In practice, I am curious to explore further the question of how this would impact us in the event that we needed to interact with an artificially sentient being. 

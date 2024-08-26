@@ -30,7 +30,7 @@ export default function BlogPost({
 
   const hashtagColors: { [key: string]: string } = {
     "#poem": "text-blue-500",
-    "#research": "text-green-700",
+    "#rabbithole": "text-green-700",
     "#experience": "text-pink-500",
     // Add more hashtags and their corresponding color classes
   };

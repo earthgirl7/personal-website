@@ -1,7 +1,7 @@
 ---
 id: "2"
 hashtag: "#rabbithole"
-title: "Origins of the Six Human Emotions"
+title: "Origins of the Six Basic Emotions"
 date: "August 10, 2024"
 ---
 

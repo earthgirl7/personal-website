@@ -1,7 +1,7 @@
 ---
-id: "3"
+id: ""
 hashtag: "#experience"
-title: "My Minerva Journey"
+title: "My Minerva Journey: "
 date: "January 27, 2024"
 ---
 A year ago, I graduated from what’s been named the *[most innovative](https://www.wuri.world/2022-global-top-100)* university in the world.
@@ -10,7 +10,7 @@ A year ago, I graduated from what’s been named the *[most innovative](https://
 
 Here is my attempt to share with you the incredible ways in which attending Minerva has transformed my person, life, and soul.
 
-But first, I’ll provide context as to what Minerva is for those of you who either have no idea or a faint idea of what it is. This is an important prerequisite because Minerva is a very *unique* college model that departs liberally from what people normally think of when they think of an undergrad education. Feel free to skip this step if you know about Minerva already.
+But first, I’ll provide context as to what Minerva is. This is an important prerequisite because Minerva is a very *unique* college model that departs liberally from what people normally think of when they think of an undergrad education. Feel free to skip this section if you know about Minerva already.
 
 ### So what is Minerva anyway? 
 Minerva is a fully accredited, 4-year undergraduate university based out of San Francisco, with an acceptance rate of ~1%.

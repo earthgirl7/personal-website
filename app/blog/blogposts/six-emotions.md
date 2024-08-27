@@ -71,3 +71,23 @@ A key project that Ekman goes on to develop using this theory is the Facial Acti
 
 It is clear that Ekman’s theory and the FACS project put order onto the complex and chaotic phenomenon of human emotion. It is certainly not the only theory of emotion out there, but it is one that is simple to explain, and convenient to systemize. In fact, it perfectly fits the supervised machine learning framework and comes at a time when we have facial expression data widely available in image format, which has lead to fueling a lot of early emotion recognition AI.
 
+
+## Sources
+
+[The expression of the emotions in man and animals, Charles Darwin (1872)](https://www.amazon.com/Expression-Emotions-Man-Animals/dp/1470188880)
+
+[How emotions are made, Lisa Barrett (2017)](https://lisafeldmanbarrett.com/books/how-emotions-are-made/#:~:text=%E2%80%9CHow%20Emotions%20Are%20Made%20is,you%20read%20this%20important%20book.%E2%80%9D)
+
+[The structure of emotions: Evidence from neuroimaging studies, Lisa Barrett (2006)](https://journals.sagepub.com/doi/abs/10.1111/j.0963-7214.2006.00411.x)
+
+[Emotional Expression Reconsidered: Challenges to Inferring Emotion From Human Facial Movements, Lisa Barrett (2019)](https://journals.sagepub.com/doi/10.1177/1529100619832930)
+
+[Universal Facial Expressions of Emotions, Paul Ekman (1970)](https://psycnet.apa.org/record/1972-06605-001)
+
+[Constants across cultures in the face and emotion, Paul Ekman (1971)](https://psycnet.apa.org/doiLanding?doi=10.1037/h0030377)
+
+[Emotion Experiment: Darwin Correspondence Project (2015)](https://www.darwinproject.ac.uk/commentary/human-nature/expression-emotions/emotion-experiment)
+
+[A functional architecture of the human brain, Lindquist, A., & Barrett, L. (2012)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3482298/)
+
+[Facial Action Coding System, Paul Ekman](https://www.paulekman.com/facial-action-coding-system/)

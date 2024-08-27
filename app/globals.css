@@ -10,6 +10,16 @@
   --hr-color: black;
 }
 
+.markdown a {
+  color: var(--hover-color);
+
+  font-style: oblique;
+}
+
+.markdown a:hover {
+  color: #db2777; 
+}
+
 .markdown > * {
   all: revert;
 }

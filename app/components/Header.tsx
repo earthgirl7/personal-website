@@ -37,7 +37,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
           ☰
         </button>
 
-        <div className="w-full md:w-auto">
+        <div className="w-24 md:w-auto">
           <Link
             className="text-xl font-sans hover:text-hover-color text-center md:text-left block"
             href="/"
@@ -47,7 +47,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
         </div>
         <div className="relative">
           <nav
-            className={`md:flex justify-center flex-grow ${
+            className={`md:flex justify-between flex-grow ${
               isMenuOpen
                 ? "block fixed inset-0 flex text-xl font-bold"
                 : "hidden"
@@ -60,7 +60,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                 isMenuOpen ? "w-full" : ""
               }`}
             >
-              <li className=" md:pr-4">
+              <li className="">
                 <Link
                   href="/blog"
                   className=" font-light hover:text-hover-color font-sans"
@@ -68,27 +68,12 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                   WRITINGS
                 </Link>
               </li>
-              {/* <li className=" md:pr-4">
-                <Link
-                  href="/about"
-                  className="font-light hover:text-hover-color font-sans"
-                >
-                  ABOUT
-                </Link>
-              </li> */}
-              {/* <li className="">
-                <Link
-                  href="https://anosharahim.github.io/resume/"
-                  className="font-light hover:text-hover-color font-sans"
-                >
-                  RESUME
-                </Link>
-              </li> */}
             </ul>
           </nav>
         </div>
-
-        <DarkModeToggle />
+        <div className="w-24 flex justify-end">
+          <DarkModeToggle />
+        </div>
       </div>
       {isBlurred && (
         <div

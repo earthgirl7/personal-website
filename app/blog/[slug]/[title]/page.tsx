@@ -32,7 +32,7 @@ export default function BlogPost({
     "#poem": "text-blue-500",
     "#rabbithole": "text-green-700",
     "#experience": "text-pink-500",
-    // Add more hashtags and their corresponding color classes
+    "#machinelearning": "text-orange-600",
   };
 
   return (

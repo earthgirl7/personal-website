@@ -31,12 +31,13 @@ const DarkModeToggle: React.FC = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <button
-      aria-hidden={!mounted}
-      className={`${
-        !mounted ? "invisible" : ""
-      } px-4 sm:px-0 rounded flex items-center justify-center ${
+      className={` px-4 sm:px-0 rounded flex items-center justify-center ${
         isDarkMode
           ? "bg-[var(--foreground-rgb)] text-white"
           : "bg-[var(--foreground-rgb)] text-gray-800"

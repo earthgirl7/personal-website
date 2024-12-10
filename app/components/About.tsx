@@ -49,11 +49,18 @@ const About = () => {
           <div
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
             style={{
-              width: `${ringSize}vw`,
-              height: `${ringSize}vw`,
+              width: '100vw',
+              height: '100vw',
+              transform: `translate(-50%, -50%) scale(${ringSize / 100})`,
               background:
                 "radial-gradient(circle, transparent 51%, rgba(255,105,180,0.5) 50%, rgba(255,105,180,0.5) 51%, transparent 52%)",
-              transition: "all 0.1s ease-out",
+              transition: "transform 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
+              WebkitTransform: `translate(-50%, -50%) scale(${ringSize / 100})`,
+              WebkitTransition: "transform 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              perspective: 1000,
+              WebkitPerspective: 1000,
             }}
           />
         </div>

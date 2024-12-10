@@ -26,19 +26,23 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
-      <body className={`${josefinSans.className} ${jetBrainsMono.variable}`}>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              try {
-                if (localStorage.getItem('darkMode') === 'true') {
-                  document.body.classList.add('dark-mode');
-                }
-              } catch (e) {}
+              (function() {
+                try {
+                  const isDark = localStorage.getItem('darkMode') === 'true';
+                  if (isDark) {
+                    document.documentElement.classList.add('dark-mode');
+                  }
+                  document.documentElement.style.setProperty('--initial-theme-icon', isDark ? "'🌞'" : "'🌙'");
+                } catch (e) {}
+              })();
             `,
           }}
         />
+      </Head>
+      <body className={`${josefinSans.className} ${jetBrainsMono.variable}`}>
         {children}
         <StickyDotCursor />
       </body>

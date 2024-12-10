@@ -1,0 +1,34 @@
+.ring-animation {
+  animation: ring 0.8s ease-out;
+}
+
+.ring-animation::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2.5px solid #ec4899; /* pink-500 color */
+  border-radius: 50%;
+  animation: ringExpand 0.8s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+@keyframes ringExpand {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-width: 2.5px;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  100% {
+    width: 500%;
+    height: 500%;
+    opacity: 0;
+    border-width: 1px;
+  }
+} 

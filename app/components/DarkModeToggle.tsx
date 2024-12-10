@@ -11,6 +11,12 @@ const DarkModeToggle: React.FC = () => {
     return false;
   });
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   useEffect(() => {
     const body = document.body;
     if (isDarkMode) {
@@ -24,6 +30,10 @@ const DarkModeToggle: React.FC = () => {
   const toggleMode = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button

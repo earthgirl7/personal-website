@@ -3,6 +3,7 @@ import Head from "next/head";
 import { JetBrains_Mono, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import StickyDotCursor from "./components/StickyDotCursor";
+import ClientOnly from "./components/ClientOnly";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
@@ -23,13 +24,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body className={`${josefinSans.className} ${jetBrainsMono.variable}`}>
-        {children}
-        <StickyDotCursor />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function setTheme(theme) {
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                  window.localStorage.setItem('theme', theme);
+                }
+                var storedTheme = window.localStorage.getItem('theme');
+                var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                var theme = storedTheme || systemTheme;
+                setTheme(theme);
+              })();
+            `,
+          }}
+        />
+        <ClientOnly>
+          {children}
+          <StickyDotCursor />
+        </ClientOnly>
       </body>
     </html>
   );

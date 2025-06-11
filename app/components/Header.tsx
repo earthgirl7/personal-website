@@ -1,6 +1,6 @@
 "use client";
 import Head from "next/head";
-import DarkModeToggle from "./DarkModeToggle";
+import ThemeToggle from "./ThemeToggle";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -27,15 +27,23 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
   return (
     <header className={headerClasses}>
       <div className="container mx-auto flex justify-between items-center">
-        <button
-          className="md:hidden text-3xl p-4"
-          onClick={() => {
-            setIsMenuOpen(!isMenuOpen);
-            setIsBlurred(!isBlurred);
-          }}
-        >
-          ☰
-        </button>
+        <div className="w-1/3">
+          <button
+            className="md:hidden text-3xl p-4"
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+              setIsBlurred(!isBlurred);
+            }}
+          >
+            ☰
+          </button>
+        </div>
+
+        <div className="w-1/3 flex justify-center">
+          <ThemeToggle />
+        </div>
+
+        <div className="w-1/3" />
 
         {/* <div className="w-24 md:w-auto">
           <Link
@@ -70,9 +78,6 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
               </li> */}
             </ul>
           </nav>
-        </div>
-        <div className="w-24 flex justify-end">
-          <DarkModeToggle />
         </div>
       </div>
       {isBlurred && (

@@ -6,7 +6,8 @@ import Footer from "../../../components/Footer";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-export default function BlogPost({
+// @ts-ignore
+export default async function BlogPost({
   params,
 }: {
   params: { slug: string; title: string };

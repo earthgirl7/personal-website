@@ -28,17 +28,6 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body className={`${josefinSans.className} ${jetBrainsMono.variable}`}>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (localStorage.getItem('darkMode') === 'true') {
-                  document.body.classList.add('dark-mode');
-                }
-              } catch (e) {}
-            `,
-          }}
-        />
         {children}
         <StickyDotCursor />
       </body>

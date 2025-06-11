@@ -8,10 +8,6 @@ import About from "./components/About";
 export default function Home() {
   const words = [
     "ML Research Engineer",
-    "lifelong learner",
-    "wanderer",
-    "creative",
-    "scholar",
   ];
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isChanging, setIsChanging] = useState(false);

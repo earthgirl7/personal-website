@@ -24,14 +24,6 @@
   all: revert;
 }
 
-/* TODO: adapt dark mode to system settings */
-.dark-mode { 
-  --foreground-rgb: 217, 217, 217;
-  --background-start-rgb: 25, 23, 23;
-  --background-end-rgb: 25, 23, 23;
-  --hr-color: 217, 217, 217;
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

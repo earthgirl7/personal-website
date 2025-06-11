@@ -64,7 +64,7 @@ const About = () => {
             }}
           />
         </div>
-        <Header isFixed={true} />
+        {/* <Header isFixed={true} /> */}
         <div className="h-[100vh]">
           <div className="sticky top-0 h-screen flex items-center justify-center">
             <div className="flex flex-col items-center px-4 sm:px-0">

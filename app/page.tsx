@@ -7,7 +7,7 @@ import About from "./components/About";
 
 export default function Home() {
   const words = [
-    "AI engineer",
+    "ML Research Engineer",
     "lifelong learner",
     "wanderer",
     "creative",
@@ -34,29 +34,28 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* <Header /> */}
-      <main className="pb-[1vh]">
-        <div className="flex flex-grow container mx-auto pt-[35vh] pb-[40vh] items-center justify-center">
-          <div className="text-center">
-            {/* <p className="text-xl font-light font-sans mb-5">Hi, my name is</p> */}
-            <h1 className="text-4xl font-sans font-semi-light mb-8">
-              ANOSHA RAHIM
-            </h1>
+      <Header isFixed={true} />
+      <main className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          {/* <p className="text-xl font-light font-sans mb-5">Hi, my name is</p> */}
+          <h1 className="text-4xl font-sans font-semi-light mb-8">
+            ANOSHA RAHIM
+          </h1>
 
-            <p className="text-2xl font-light font-sans flex justify-center items-center mb-8">
-              <span className="word-container">
-                <span className={`word-change ${isChanging ? "changing" : ""}`}>
-                  {currentWord}
-                </span>
+          <p className="text-2xl font-light font-sans flex justify-center items-center mb-8">
+            <span className="word-container">
+              <span className={`word-change ${isChanging ? "changing" : ""}`}>
+                {currentWord}
               </span>
-            </p>
-            <p className="text-sm font-light font-sans mb-5">
-              📍 San Francisco, CA
-            </p>
-          </div>
+            </span>
+          </p>
+          <p className="text-sm font-light font-sans mb-5">
+            📍 San Francisco, CA
+          </p>
         </div>
-        <About />
       </main>
+
+      {/* <About /> */}
 
       <Footer />
     </div>

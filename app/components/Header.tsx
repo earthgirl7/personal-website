@@ -37,14 +37,14 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
           ☰
         </button>
 
-        <div className="w-24 md:w-auto">
+        {/* <div className="w-24 md:w-auto">
           <Link
             className="text-xl font-sans hover:text-hover-color text-center md:text-left block"
             href="/"
           >
             ANOSHA
           </Link>
-        </div>
+        </div> */}
         <div className="relative">
           <nav
             className={`md:flex justify-between flex-grow ${
@@ -60,14 +60,14 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
                 isMenuOpen ? "w-full" : ""
               }`}
             >
-              <li className="">
+              {/* <li className="">
                 <Link
                   href="/blog"
                   className=" font-light hover:text-hover-color font-sans"
                 >
                   WRITINGS
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

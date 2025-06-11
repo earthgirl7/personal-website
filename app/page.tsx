@@ -23,7 +23,7 @@ export default function Home() {
         });
         setIsChanging(false);
       }, 500); // Half of the interval for smooth transition
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, []);

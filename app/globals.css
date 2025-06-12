@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 217, 217, 217;
+  --background-start-rgb: 245, 245, 237;
   --background-end-rgb: 230, 230, 230;
   --hover-color: 236,72,153;
   --hr-color: black;
@@ -25,10 +25,10 @@
 }
 
 html.dark {
-  --foreground-rgb: 217, 217, 217;
+  --foreground-rgb: 245, 245, 237;
   --background-start-rgb: 25, 23, 23;
   --background-end-rgb: 25, 23, 23;
-  --hr-color: 217, 217, 217;
+  --hr-color: 245, 245, 237;
 }
 
 body {

@@ -28,15 +28,6 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
     <header className={headerClasses}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="w-1/3">
-          <button
-            className="md:hidden text-3xl p-4"
-            onClick={() => {
-              setIsMenuOpen(!isMenuOpen);
-              setIsBlurred(!isBlurred);
-            }}
-          >
-            ☰
-          </button>
         </div>
 
         <div className="w-1/3 flex justify-center">

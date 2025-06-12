@@ -34,18 +34,18 @@ export default function Home() {
       <main className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           {/* <p className="text-xl font-light font-sans mb-5">Hi, my name is</p> */}
-          <h1 className="text-4xl font-sans font-semi-light mb-8">
+          <h1 className="text-3xl lg:text-4xl font-sans font-semi-light mb-8">
             ANOSHA RAHIM
           </h1>
 
-          <p className="text-2xl font-light font-sans flex justify-center items-center mb-8">
+          <p className="text-xl lg:text-xl font-light font-sans flex justify-center items-center mb-8">
             <span className="word-container">
               <span className={`word-change ${isChanging ? "changing" : ""}`}>
                 {currentWord}
               </span>
             </span>
           </p>
-          <p className="text-sm font-light font-sans mb-5">
+          <p className="text-xs lg:text-sm font-light font-sans mb-5">
             📍 San Francisco, CA
           </p>
         </div>

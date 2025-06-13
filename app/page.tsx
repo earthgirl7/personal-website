@@ -101,7 +101,7 @@ export default function Home() {
               </span>
             </span>
           </p>
-          <p className="text-xs lg:text-sm font-light font-sans mb-5">
+          <p className="text-xs lg:text-sm font-light font-sans mb-5 transition-transform duration-500 hover:scale-105 cursor-pointer">
             📍 San Francisco, CA
           </p>
         </div>

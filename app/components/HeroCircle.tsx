@@ -124,11 +124,11 @@ export default function HeroCircle({ currentWord, isChanging }: HeroCircleProps)
         }}
       >
         <div style={{ pointerEvents: 'auto' }}>
-          <h1 className="text-3xl lg:text-4xl font-sans font-semi-light mb-4">
+          <h1 className="text-2xl lg:text-3xl font-sans font-semi-light mb-4">
             ANOSHA RAHIM
           </h1>
 
-          <p className="text-xl lg:text-xl font-light font-sans flex justify-center items-center mb-5">
+          <p className="text-sm lg:text-base font-light font-sans flex justify-center items-center mb-5">
             <span className="word-container">
               <span className={`word-change ${isChanging ? "changing" : ""}`}>
                 {currentWord}

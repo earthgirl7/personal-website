@@ -10,14 +10,14 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub className="text-xl text-[var(--foreground-rgb)] hover:text-pink-500 transition duration-300" />
+            <FaGithub className="text-xl text-[var(--foreground-rgb)] md:hover:text-pink-500 transition duration-300" />
           </a>
           <a
             href="https://linkedin.com/in/anosharahim"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-xl text-[var(--foreground-rgb)] hover:text-hover-color transition duration-300" />
+            <FaLinkedin className="text-xl text-[var(--foreground-rgb)] md:hover:text-hover-color transition duration-300" />
           </a>
           {/* <a href="#" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="text-xl text-gray-800 hover:text-black transition duration-300" />
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter className="text-xl text-[var(--foreground-rgb)] hover:text-hover-color transition duration-300" />
+            <FaTwitter className="text-xl text-[var(--foreground-rgb)] md:hover:text-hover-color transition duration-300" />
           </a>
         </div>
       </div>

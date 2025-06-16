@@ -84,6 +84,12 @@ export default function Home() {
             theme === "dark" ? "opacity-100 evening-sky-animation" : "opacity-0"
           }`}
         />
+        {/* 30% Black Overlay for Dark Mode */}
+        <div 
+          className={`absolute inset-0 bg-black transition-opacity duration-1000 ${
+            theme === "dark" ? "opacity-35" : "opacity-0"
+          }`}
+        />
       </div>
 
       <Header isFixed={true} />

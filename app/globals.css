@@ -76,3 +76,8 @@ body {
 .evening-sky-animation {
   animation: gentle-zoom 10s ease-in-out infinite alternate;
 }
+
+/* Ensure SVG text hover states work consistently */
+svg text:hover {
+  fill: rgb(236, 72, 153) !important;
+}

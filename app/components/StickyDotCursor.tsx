@@ -11,7 +11,7 @@ const StickyDotCursor = () => {
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
-    const speed = 0.15;
+    const speed = 0.4;
 
     const animate = () => {
       const dx = targetRef.current.x - cursorRef.current.x;

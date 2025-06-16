@@ -58,9 +58,9 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full focus:outline-none transition-transform duration-300 hover:scale-110"
+      className="p-2 rounded-full focus:outline-none transition-transform duration-300 hover:scale-110 hover:text-pink-500"
     >
-      {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+      {theme === "light" ? <Moon size={23} /> : <Sun size={23} />}
     </button>
   );
 } 

@@ -138,6 +138,59 @@ export default function HeroCircle({ currentWord, isChanging }: HeroCircleProps)
           <p className="text-xs lg:text-sm font-light font-sans ">
             📍 San Francisco, CA
           </p>
+                      <p className="text-xs lg:text-sm font-light font-sans mt-12 px-8 lg:px-16 text-left leading-relaxed">
+              <span className="text-pink-500">→</span> I am designing custom CUDA kernels to memory-optimize a novel attention mechanism we are testing at{" "}
+              <a 
+                href="https://springtail.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-pink-500 hover:text-pink-600 underline"
+              >
+                Springtail
+              </a>.
+              <br />
+              <br />
+              <span className="text-pink-500">→</span> I recently adapted flash attention techniques to slash memory complexity from O(n³) down to O(n).
+              <br />
+              <br />
+              <span className="text-pink-500">→</span> Previously, I was a CTO at a privacy-focused communication tooling startup.
+              <br />
+              <br />
+              <span className="text-pink-500">→</span> I am a graduate of the {" "}
+              <a 
+                href="https://www.theguardian.com/education/2020/jul/30/the-future-of-education-or-just-hype-the-rise-of-minerva-the-worlds-most-selective-university" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-pink-500 hover:text-pink-600 underline"
+              >
+                Minerva University
+              </a>, where I studied AI and Machine Learning.
+              <br />
+              <br />
+              <span className="text-pink-500">→</span> Places I've lived in for 6+ months:
+              <br />
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> San Francisco, CA  (current)
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> Berlin  (Minerva)
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> London (Minerva)
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> Seoul (Minerva)
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> Bali (COVID)
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> Ankara, Turkey (university - transferred out)
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> Appleton, WI (exchange program)
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> Karachi (grew up)
+              <br />
+              <br/>
+              <span className="text-pink-500">→</span> My current obsession: Tai Chi
+              <br />
+              <br />
+            </p>
         </div>
       </div>
     </div>

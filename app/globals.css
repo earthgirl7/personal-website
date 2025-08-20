@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Disable fade and theme transitions for instant changes */
+html, body, .theme-transition, [class*="transition"], [class*="duration"] {
+  transition: none !important;
+}
+
+/* Disable opacity transitions on background images */
+img, .bg-black {
+  transition: none !important;
+}
+
+/* Prevent initial flash by setting dark background as default */
+html {
+  background-color: black;
+}
+
+/* Override with light background only when not dark mode */
+html:not(.dark) {
+  background-color: rgb(245, 245, 237);
+}
+
+/* Ensure body background is transparent in dark mode to show evening sky */
+html.dark body {
+  background: transparent;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 245, 245, 237;
@@ -26,9 +51,10 @@
 
 html.dark {
   --foreground-rgb: 245, 245, 237;
-  --background-start-rgb: 245, 245, 237;
-  --background-end-rgb: 230, 230, 230;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 20, 20, 20;
   --hr-color: 245, 245, 237;
+  --menu-bg-dark: 0, 0, 0;
 }
 
 body {
@@ -50,7 +76,6 @@ body {
 
 .word-change {
   display: inline-block;
-  transition: transform 0.5s, opacity 0.5s;
 }
 
 .word-change.changing {

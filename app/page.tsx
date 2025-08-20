@@ -81,13 +81,13 @@ export default function Home() {
           src="/eveningsky.jpg"
           alt="Evening Sky"
           fill
-          className={`object-cover transition-opacity duration-1000 ${
+          className={`object-cover ${
             theme === "dark" ? "opacity-100 evening-sky-animation" : "opacity-0"
           }`}
         />
         {/* 30% Black Overlay for Dark Mode */}
         <div 
-          className={`absolute inset-0 bg-black transition-opacity duration-1000 ${
+          className={`absolute inset-0 bg-black ${
             theme === "dark" ? "opacity-35" : "opacity-0"
           }`}
         />

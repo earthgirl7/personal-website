@@ -54,9 +54,9 @@ const About = () => {
               transform: `translate(-50%, -50%) scale(${ringSize / 100})`,
               background:
                 "radial-gradient(circle, transparent 51%, rgba(255,105,180,0.5) 50%, rgba(255,105,180,0.5) 51%, transparent 52%)",
-              transition: "transform 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
+
               WebkitTransform: `translate(-50%, -50%) scale(${ringSize / 100})`,
-              WebkitTransition: "transform 0.1s cubic-bezier(0.4, 0, 0.2, 1)",
+
               backfaceVisibility: "hidden",
               WebkitBackfaceVisibility: "hidden",
               perspective: 1000,

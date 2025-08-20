@@ -78,7 +78,7 @@ export default function HeroCircle({ currentWord, isChanging }: HeroCircleProps)
       
       {/* CSS-positioned navigation text
       <div
-        className="absolute font-sans font-light tracking-wider cursor-pointer hover:text-pink-500 transition-colors duration-300"
+        className="absolute font-sans font-light tracking-wider cursor-pointer hover:text-pink-500"
         style={{
           left: `${blogPos.x}px`,
           top: `${blogPos.y}px`,
@@ -91,7 +91,7 @@ export default function HeroCircle({ currentWord, isChanging }: HeroCircleProps)
       </div>
       
       <div
-        className="absolute font-sans font-light tracking-wider cursor-pointer hover:text-pink-500 transition-colors duration-300"
+        className="absolute font-sans font-light tracking-wider cursor-pointer hover:text-pink-500"
         style={{
           left: `${projectsPos.x}px`,
           top: `${projectsPos.y}px`,
@@ -104,7 +104,7 @@ export default function HeroCircle({ currentWord, isChanging }: HeroCircleProps)
       </div>
       
       <div
-        className="absolute font-sans font-light tracking-wider cursor-pointer hover:text-pink-500 transition-colors duration-300"
+        className="absolute font-sans font-light tracking-wider cursor-pointer hover:text-pink-500"
         style={{
           left: `${aboutPos.x}px`,
           top: `${aboutPos.y}px`,

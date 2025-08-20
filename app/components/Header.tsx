@@ -73,7 +73,7 @@ const Header: React.FC<{ isFixed?: boolean }> = ({ isFixed = false }) => {
       </div>
       {isBlurred && (
         <div
-          className="fixed inset-0 bg-white dark:bg-[var(--menu-bg-dark)] bg-opacity-90 backdrop-blur-md z-30"
+          className="fixed inset-0 bg-white dark:bg-black bg-opacity-90 backdrop-blur-md z-30"
           onClick={() => {
             setIsMenuOpen(false);
             setIsBlurred(false);

@@ -73,7 +73,7 @@ const StickyDotCursor = () => {
         left: `${position.x}px`,
         top: `${position.y}px`,
         transform: "translate(-50%, -50%)",
-        transition: "transform 0.1s cubic-bezier(0.34, 1.56, 0.64, 1)",
+
       }}
     ></div>
   );

@@ -167,7 +167,7 @@ export default function HeroCircle({ currentWord, isChanging }: HeroCircleProps)
               </a>, where I studied AI and Machine Learning.
               <br />
               <br />
-              <span className="text-pink-500">→</span> Places I've lived in for 6+ months:
+              <span className="text-pink-500">→</span> Places I&apos;ve lived in for 6+ months:
               <br />
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-pink-500">→</span> San Francisco, CA  (current)

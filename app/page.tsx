@@ -71,7 +71,7 @@ export default function Home() {
     }, 9000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [words]);
 
   return (
     <div className="flex flex-col min-h-screen relative">

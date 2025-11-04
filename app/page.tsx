@@ -77,7 +77,7 @@ export default function Home() {
               Previously, I worked on knowledge graphs for AI-powered drug discovery at <a href="https://enveda.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 dark:text-gray-100 hover:text-orange-500 underline">Enveda Bio</a>, as well as advancing conversational AI at Zoom. I also led engineering for a startup developing privacy-focused communication tools.
               <br /><br />
               I graduated from Minerva University with a computer science degree. During my undergrad studying AI and machine learning,
-              I lived in five countries as part of Minerva's global rotation program.
+              I lived in five countries as part of Minerva&apos;s global rotation program.
 
               <br /><br />
               Currently, I live in San Francisco.

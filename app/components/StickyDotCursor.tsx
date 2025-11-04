@@ -66,14 +66,14 @@ const StickyDotCursor = () => {
 
   return (
     <div
-      className={`fixed w-3 h-3 bg-pink-500 rounded-full pointer-events-none z-40 hidden md:block ${
+      className={`fixed w-3 h-3 rounded-full pointer-events-none z-40 hidden md:block ${
         isClicked ? "ring-animation" : ""
       }`}
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         transform: "translate(-50%, -50%)",
-
+        backgroundColor: "#e1a74f",
       }}
     ></div>
   );

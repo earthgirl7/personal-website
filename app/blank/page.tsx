@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-export default function Home() {
+export default function BlankPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 py-12 sm:py-24 lg:py-48">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
@@ -13,8 +13,8 @@ export default function Home() {
             <h1 className="text-2xl sm:text-3xl font-normal text-gray-900 dark:text-gray-100">
               Anosha Rahim
             </h1>
- 
- 
+
+
             {/* Social Media Icons */}
             <div className="flex space-x-3 mt-4">
               <a

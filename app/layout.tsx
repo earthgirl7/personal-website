@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Head from "next/head";
 import { JetBrains_Mono, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import StickyDotCursor from "./components/StickyDotCursor";
@@ -15,7 +14,15 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anosha's Corner",
+  title: "Anosha Rahim",
+  description: "Machine Learning Researcher at Springtail",
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: 'any', type: 'image/png' },
+    ],
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -25,9 +32,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
       <body className={`${josefinSans.className} ${jetBrainsMono.variable}`}>
         <script
           dangerouslySetInnerHTML={{

@@ -10,7 +10,7 @@ export default function Home() {
           {/* Left Column - Name and About Header */}
           <div className="flex-none w-full lg:w-auto lg:self-start">
             {/* Dark mode: add "dark:text-gray-100" to className below to re-enable */}
-            <h1 className="text-2xl sm:text-3xl font-normal text-gray-900">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900">
               Anosha Rahim
             </h1>
             
@@ -24,15 +24,15 @@ export default function Home() {
               alt="Anosha Rahim"
               width={1600}
               height={1000}
-              className="w-full h-auto max-w-full sm:max-w-sm lg:max-w-none"
+              className="w-full h-auto"
               priority
             />
           </div>
           
           {/* Right Column - About Content */}
-          <div className="flex-[2] w-full lg:w-auto lg:pr-32">
+          <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
             {/* Dark mode: add "dark:text-gray-100" to paragraph, and "dark:text-gray-100" to links below to re-enable */}
-            <p className="text-sm font-light leading-relaxed text-gray-900">
+            <p className="text-sm font-light leading-snug text-gray-900">
               I am a machine learning researcher at <a href="https://springtail.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Springtail</a>, where I build novel AI models to enable scientific reasoning in machines.
               <br /><br />
               Previously, I worked on knowledge graphs for AI-powered drug discovery at <a href="https://enveda.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Enveda Bio</a>, as well as advancing conversational AI at Zoom. I also led engineering for a startup developing privacy-focused communication tools.

@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Josefin_Sans } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import StickyDotCursor from "./components/StickyDotCursor";
 import ClientOnly from "./components/ClientOnly";
 
-const josefinSans = Josefin_Sans({
+const notoSans = Noto_Sans({
   subsets: ["latin"],
-  variable: "--font-josefin-sans",
-});
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-noto-sans",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${josefinSans.className} ${jetBrainsMono.variable}`} style={{ backgroundColor: 'white' }}>
+      <body className={notoSans.className} style={{ backgroundColor: 'white' }}>
         {/* Dark mode script - commented out for now */}
         {/* <script
           dangerouslySetInnerHTML={{

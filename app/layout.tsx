@@ -31,9 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${josefinSans.className} ${jetBrainsMono.variable}`}>
-        <script
+    <html lang="en">
+      <body className={`${josefinSans.className} ${jetBrainsMono.variable}`} style={{ backgroundColor: 'white' }}>
+        {/* Dark mode script - commented out for now */}
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -54,7 +55,7 @@ export default function RootLayout({
               })();
             `,
           }}
-        />
+        /> */}
         <ClientOnly>
           {children}
           <StickyDotCursor />

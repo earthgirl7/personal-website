@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
             {/* Dark mode: add "dark:text-gray-100" to paragraph, and "dark:text-gray-100" to links below to re-enable */}
             <p className="text-sm font-light leading-snug text-gray-900">
-              I am an AI researcher at <a href="https://springtail.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Springtail</a>, where I build novel AI models to enable scientific reasoning in machines.
+              I am an AI researcher at <a href="https://springtail.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Springtail</a>, where I work on novel architectures to enable scientific reasoning in machines.
               <br /><br />
               Previously, I worked on knowledge graphs for AI-powered drug discovery at <a href="https://enveda.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Enveda</a>, as well as advancing conversational AI at Zoom. I also led engineering for a startup developing privacy-focused communication tools.
               <br /><br />

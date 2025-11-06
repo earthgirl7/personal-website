@@ -38,7 +38,7 @@ export default function Home() {
               Previously, I built knowledge graphs for drug discovery at <a href="https://enveda.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Enveda</a> and enhanced conversational AI at Zoom. I also led engineering for a startup developing privacy-focused communication tooling.
               <br /><br />
               In 2022, I graduated from Minerva University with a computer science degree, focusing specifically on AI and machine learning. During my undergrad,
-              I lived in five countries as part of Minerva's <a href="https://www.minervaproject.com/insights/seven-principles-for-designing-experiential-learning-journeys" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">global rotation</a> program.
+              I lived in five countries as part of Minerva&apos;s <a href="https://www.minervaproject.com/insights/seven-principles-for-designing-experiential-learning-journeys" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">global rotation</a> program.
 
               <br /><br />
               I now live in San Francisco.

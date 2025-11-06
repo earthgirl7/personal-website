@@ -32,16 +32,16 @@ export default function Home() {
           {/* Right Column - About Content */}
           <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
             {/* Dark mode: add "dark:text-gray-100" to paragraph, and "dark:text-gray-100" to links below to re-enable */}
-            <p className="text-sm font-light leading-snug text-gray-900">
-              I am an AI researcher at <a href="https://springtail.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Springtail</a>, where I work on novel architectures to enable scientific reasoning in machines.
+            <p className="text-md font-light leading-snug text-gray-900">
+              I am an AI researcher at <a href="https://springtail.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Springtail</a>, where my mission is to unlock scientific reasoning in machines.
               <br /><br />
-              Previously, I worked on knowledge graphs for AI-powered drug discovery at <a href="https://enveda.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Enveda</a>, as well as advancing conversational AI at Zoom. I also led engineering for a startup developing privacy-focused communication tools.
+              Previously, I built knowledge graphs for drug discovery at <a href="https://enveda.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Enveda</a> and enhanced conversational AI at Zoom. I also led engineering for a startup developing privacy-focused communication tooling.
               <br /><br />
-              In 2022, I graduated from Minerva University with a computer science degree. During my undergrad,
-              I lived in five countries as part of Minerva&apos;s global rotation program.
+              In 2022, I graduated from Minerva University with a computer science degree, focusing specifically on AI and machine learning. During my undergrad,
+              I lived in five countries as part of Minerva's <a href="https://www.minervaproject.com/insights/seven-principles-for-designing-experiential-learning-journeys" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">global rotation program</a>.
 
               <br /><br />
-              Currently, I live in San Francisco.
+              I now live in San Francisco.
             </p>
           </div>
         </div>

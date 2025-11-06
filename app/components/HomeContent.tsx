@@ -1,0 +1,154 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import Image from "next/image";
+import SocialIcons from "./SocialIcons";
+
+interface BlogPost {
+  id: string;
+  hashtag: string;
+  title: string;
+  date: string;
+  content: string;
+}
+
+interface HomeContentProps {
+  blogData: BlogPost[];
+}
+
+export default function HomeContent({ blogData }: HomeContentProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab");
+  const [activeTab, setActiveTab] = useState<"about" | "blog">(
+    tabParam === "blog" ? "blog" : "about"
+  );
+
+  useEffect(() => {
+    const currentTab = searchParams.get("tab");
+    if (currentTab === "blog" || currentTab === "about") {
+      setActiveTab(currentTab);
+    }
+  }, [searchParams]);
+
+  const handleTabChange = (tab: "about" | "blog") => {
+    setActiveTab(tab);
+    router.push(`?tab=${tab}`, { scroll: false });
+  };
+
+  return (
+    <div className="flex flex-col lg:flex-row lg:items-stretch gap-6 lg:gap-12">
+      {/* Left Column - Name, Social Icons, and Navigation */}
+      <div className="flex-none w-full lg:w-auto lg:self-start">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900">
+          Anosha Rahim
+        </h1>
+        
+        <SocialIcons />
+        
+        {/* Navigation Tabs */}
+        <div className="flex flex-col gap-2 mt-12">
+          <button
+            onClick={() => handleTabChange("about")}
+            className={`text-md text-left ${
+              activeTab === "about"
+                ? "text-gray-900 font-semibold"
+                : "text-gray-500 hover:text-gray-900 font-light"
+            }`}
+          >
+            About
+          </button>
+          <button
+            onClick={() => handleTabChange("blog")}
+            className={`text-md text-left ${
+              activeTab === "blog"
+                ? "text-gray-900  font-semibold"
+                : "text-gray-500 hover:text-gray-900 font-light"
+            }`}
+          >
+            Blog
+          </button>
+        </div>
+      </div>
+      
+      {/* Middle Column - Portrait Image */}
+      <div className="flex-[1] w-full lg:w-auto lg:self-start">
+        <Image
+          src="/portrait.png"
+          alt="Anosha Rahim"
+          width={1600}
+          height={1000}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
+      
+      {/* Right Column - Dynamic Content */}
+      <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
+        {activeTab === "about" ? (
+          <div className="text-sm font-light leading-relaxed text-gray-900">
+            I am an AI researcher at{" "}
+            <a
+              href="https://springtail.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:text-orange-500 underline"
+            >
+              Springtail
+            </a>
+            , where my mission is to unlock scientific reasoning in machines.
+            <br />
+            <br />
+            Previously, I built knowledge graphs for drug discovery at{" "}
+            <a
+              href="https://enveda.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:text-orange-500 underline"
+            >
+              Enveda
+            </a>{" "}
+            and enhanced conversational AI at Zoom. I also led engineering for a
+            startup developing privacy-focused communication tooling.
+            <br />
+            <br />
+            In 2022, I graduated from Minerva University with a computer science
+            degree, focusing specifically on AI and machine learning. During my
+            undergrad, I lived in five countries as part of Minerva&apos;s{" "}
+            <a
+              href="https://www.minervaproject.com/insights/seven-principles-for-designing-experiential-learning-journeys"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:text-orange-500 underline"
+            >
+              global rotation
+            </a>{" "}
+            program.
+            <br />
+            <br />
+            I now live in San Francisco.
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {blogData.map((post) => (
+              <a
+                key={post.id}
+                href={`/blog`}
+                className="flex justify-between items-baseline group"
+              >
+                <span className="text-sm font-light text-gray-900 group-hover:font-semibold">
+                  {post.title}
+                </span>
+                <span className="text-xs font-light text-gray-500 whitespace-nowrap ml-4 group-hover:font-semibold">
+                  {post.date}
+                </span>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+

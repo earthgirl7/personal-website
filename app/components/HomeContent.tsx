@@ -184,10 +184,10 @@ export default function HomeContent({ blogData }: HomeContentProps) {
                     onClick={() => handlePostClick(post)}
                     className="flex justify-between items-baseline group w-full text-left"
                   >
-                    <span className="text-sm font-light text-gray-900 group-hover:font-semibold">
+                    <span className="text-sm font-light text-gray-900 group-hover:font-semibold flex-1 mr-4">
                       {post.title}
                     </span>
-                    <span className="text-xs font-light text-gray-500 whitespace-nowrap ml-4 group-hover:font-semibold">
+                    <span className="text-xs font-light text-gray-500 whitespace-nowrap flex-shrink-0 group-hover:font-semibold">
                       {post.date}
                     </span>
                   </button>

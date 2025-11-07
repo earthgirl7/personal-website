@@ -25,6 +25,9 @@ export default function HomeContent({ blogData }: HomeContentProps) {
   const tabParam = searchParams.get("tab");
   const postParam = searchParams.get("post");
   
+  // Filter to only show the travel blog post
+  const visibleBlogData = blogData.filter(post => post.id === "7");
+  
   const [activeTab, setActiveTab] = useState<"about" | "blog">(
     tabParam === "blog" ? "blog" : "about"
   );
@@ -38,12 +41,12 @@ export default function HomeContent({ blogData }: HomeContentProps) {
     
     const postId = searchParams.get("post");
     if (postId) {
-      const post = blogData.find(p => p.id === postId);
+      const post = visibleBlogData.find(p => p.id === postId);
       setSelectedPost(post || null);
     } else {
       setSelectedPost(null);
     }
-  }, [searchParams, blogData]);
+  }, [searchParams, visibleBlogData]);
 
   const handleTabChange = (tab: "about" | "blog") => {
     setActiveTab(tab);
@@ -72,7 +75,7 @@ export default function HomeContent({ blogData }: HomeContentProps) {
         <SocialIcons />
         
         {/* Navigation Tabs */}
-        <div className="flex flex-col gap-2 mt-12">
+        <div className="flex gap-6 mt-12 mb-6 lg:flex-col lg:gap-2 lg:mb-0">
           <button
             onClick={() => handleTabChange("about")}
             className={`text-md text-left ${
@@ -105,7 +108,7 @@ export default function HomeContent({ blogData }: HomeContentProps) {
           <p className="text-sm font-light text-gray-500 mb-8">
             {selectedPost.date}
           </p>
-          <div className="text-sm font-light leading-relaxed text-gray-900 markdown">
+          <div className="text-base font-light leading-relaxed text-gray-900 markdown">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {selectedPost.content}
             </ReactMarkdown>
@@ -120,7 +123,9 @@ export default function HomeContent({ blogData }: HomeContentProps) {
       ) : (
         <>
           {/* Middle Column - Portrait Image */}
-          <div className="flex-[1] w-full lg:w-auto lg:self-start">
+          <div className={`flex-[1] w-full lg:w-auto lg:self-start ${
+            activeTab === "blog" ? "hidden lg:block" : ""
+          }`}>
             <Image
               src="/portrait.png"
               alt="Anosha Rahim"
@@ -134,7 +139,7 @@ export default function HomeContent({ blogData }: HomeContentProps) {
           {/* Right Column - Dynamic Content */}
           <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
             {activeTab === "about" ? (
-              <div className="text-sm font-light leading-relaxed text-gray-900">
+              <div className="text-base font-light leading-relaxed text-gray-900">
                 I am an AI researcher at{" "}
                 <a
                   href="https://springtail.ai/"
@@ -177,14 +182,14 @@ export default function HomeContent({ blogData }: HomeContentProps) {
                 I now live in San Francisco.
               </div>
             ) : (
-              <div className="space-y-4">
-                {blogData.map((post) => (
+              <div className="space-y-4 mt-6 lg:mt-0">
+                {visibleBlogData.map((post) => (
                   <button
                     key={post.id}
                     onClick={() => handlePostClick(post)}
                     className="flex justify-between items-baseline group w-full text-left"
                   >
-                    <span className="text-sm font-light text-gray-900 group-hover:font-semibold flex-1 mr-4">
+                    <span className="text-base font-light text-gray-900 group-hover:font-semibold flex-1 mr-4">
                       {post.title}
                     </span>
                     <span className="text-xs font-light text-gray-500 whitespace-nowrap flex-shrink-0 group-hover:font-semibold">

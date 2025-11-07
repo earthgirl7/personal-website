@@ -1,50 +1,15 @@
-import Image from "next/image";
-import SocialIcons from "./components/SocialIcons";
+import { Suspense } from "react";
+import HomeContent from "./components/HomeContent";
+import blogData from "./blog/blogData";
 
 export default function Home() {
   return (
     // Dark mode: add "dark:bg-gray-900" to className below to re-enable
     <div className="min-h-screen bg-white py-12 sm:py-24 lg:py-48">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
-        <div className="flex flex-col lg:flex-row lg:items-stretch gap-6 lg:gap-12">
-          {/* Left Column - Name and About Header */}
-          <div className="flex-none w-full lg:w-auto lg:self-start">
-            {/* Dark mode: add "dark:text-gray-100" to className below to re-enable */}
-            <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900">
-              Anosha Rahim
-            </h1>
-            
-            <SocialIcons />
-          </div>
-          
-          {/* Middle Column - Portrait Image */}
-          <div className="flex-[1] w-full lg:w-auto lg:self-start">
-            <Image
-              src="/portrait.png"
-              alt="Anosha Rahim"
-              width={1600}
-              height={1000}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
-          
-          {/* Right Column - About Content */}
-          <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
-            {/* Dark mode: add "dark:text-gray-100" to paragraph, and "dark:text-gray-100" to links below to re-enable */}
-            <p className="text-md font-light leading-snug text-gray-900">
-              I am an AI researcher at <a href="https://springtail.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Springtail</a>, where my mission is to unlock scientific reasoning in machines.
-              <br /><br />
-              Previously, I built knowledge graphs for drug discovery at <a href="https://enveda.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">Enveda</a> and enhanced conversational AI at Zoom. I also led engineering for a startup developing privacy-focused communication tooling.
-              <br /><br />
-              In 2022, I graduated from Minerva University with a computer science degree, focusing specifically on AI and machine learning. During my undergrad,
-              I lived in five countries as part of Minerva&apos;s <a href="https://www.minervaproject.com/insights/seven-principles-for-designing-experiential-learning-journeys" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-orange-500 underline">global rotation</a> program.
-
-              <br /><br />
-              I now live in San Francisco.
-            </p>
-          </div>
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <HomeContent blogData={blogData} />
+        </Suspense>
       </div>
     </div>
   );

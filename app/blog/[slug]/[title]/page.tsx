@@ -6,13 +6,13 @@ import Footer from "../../../components/Footer";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-// @ts-ignore
 export default async function BlogPost({
   params,
 }: {
-  params: { slug: string; title: string };
+  params: Promise<{ slug: string; title: string }>;
 }) {
-  const post = blogData.find((post) => post.id === params.slug);
+  const { slug } = await params;
+  const post = blogData.find((post) => post.id === slug);
   const components = {
     h1: ({ children, ...props }: React.HTMLProps<HTMLHeadingElement>) => (
       <h1 {...props}>{children}</h1>

@@ -6,7 +6,7 @@ export default function SocialIcons() {
   return (
     <div className="flex space-x-3 mt-4">
       <a
-        href="https://github.com/anosharahim"
+        href="https://github.com/yourusername"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-colors"
@@ -17,7 +17,7 @@ export default function SocialIcons() {
         <FaGithub className="text-base" />
       </a>
       <a
-        href="https://linkedin.com/in/anosharahim"
+        href="https://linkedin.com/in/yourusername"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-colors"
@@ -28,7 +28,7 @@ export default function SocialIcons() {
         <FaLinkedin className="text-base" />
       </a>
       <a
-        href="https://twitter.com/anosha_rahim"
+        href="https://twitter.com/yourusername"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-colors"

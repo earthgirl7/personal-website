@@ -25,8 +25,8 @@ export default function HomeContent({ blogData }: HomeContentProps) {
   const tabParam = searchParams.get("tab");
   const postParam = searchParams.get("post");
   
-  // Filter to only show the travel blog post
-  const visibleBlogData = blogData.filter(post => post.id === "7");
+  // Show all blog posts
+  const visibleBlogData = blogData;
   
   const [activeTab, setActiveTab] = useState<"about" | "blog">(
     tabParam === "blog" ? "blog" : "about"
@@ -69,7 +69,7 @@ export default function HomeContent({ blogData }: HomeContentProps) {
       {/* Left Column - Name, Social Icons, and Navigation */}
       <div className="flex-none w-full lg:w-auto lg:self-start">
         <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900">
-          Anosha Rahim
+          Your Name
         </h1>
         
         <SocialIcons />
@@ -128,7 +128,7 @@ export default function HomeContent({ blogData }: HomeContentProps) {
           }`}>
             <Image
               src="/portrait.png"
-              alt="Anosha Rahim"
+              alt="Profile Picture"
               width={1600}
               height={1000}
               className="w-full h-auto"
@@ -140,46 +140,20 @@ export default function HomeContent({ blogData }: HomeContentProps) {
           <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
             {activeTab === "about" ? (
               <div className="text-base font-light leading-relaxed text-gray-900">
-                I am an AI researcher at{" "}
-                <a
-                  href="https://springtail.ai/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-900 hover:text-orange-500 underline"
-                >
-                  Springtail
-                </a>
-                , where my mission is to unlock scientific reasoning in machines.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 <br />
                 <br />
-                Previously, I built knowledge graphs for drug discovery at{" "}
-                <a
-                  href="https://enveda.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-900 hover:text-orange-500 underline"
-                >
-                  Enveda
-                </a>{" "}
-                and enhanced conversational AI at Zoom. I also led engineering for a
-                startup developing privacy-focused communication tooling.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 <br />
                 <br />
-                In 2022, I graduated from Minerva University with a computer science
-                degree, focusing specifically on AI and machine learning. During my
-                undergrad, I lived in five countries as part of Minerva&apos;s{" "}
-                <a
-                  href="https://www.minervaproject.com/insights/seven-principles-for-designing-experiential-learning-journeys"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-900 hover:text-orange-500 underline"
-                >
-                  global rotation
-                </a>{" "}
-                program.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                 <br />
                 <br />
-                I now live in San Francisco.
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui 
+                ratione voluptatem sequi nesciunt.
               </div>
             ) : (
               <div className="space-y-4 mt-6 lg:mt-0">

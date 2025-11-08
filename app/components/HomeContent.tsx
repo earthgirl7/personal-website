@@ -69,7 +69,7 @@ export default function HomeContent({ blogData }: HomeContentProps) {
       {/* Left Column - Name, Social Icons, and Navigation */}
       <div className="flex-none w-full lg:w-auto lg:self-start">
         <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900">
-          Your Name
+          Jesse Schmidt
         </h1>
         
         <SocialIcons />
@@ -140,20 +140,22 @@ export default function HomeContent({ blogData }: HomeContentProps) {
           <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
             {activeTab === "about" ? (
               <div className="text-base font-light leading-relaxed text-gray-900">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Hi, this is me, Jesse.
                 <br />
                 <br />
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                I'm a human being who moves between worlds. I'm drawn to paradox -- the ever expanding point between science and spirit, logic and intuition, art and analysis. My work lives in that tension, finding the points where intelligence becomes embodied and consciousness starts designing the world around us.
                 <br />
                 <br />
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
-                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                I studied neuroscience and psychoactive drug research, later earning a master's in international business. I've spoken on psychedelics, AI, and consciousness, and helped build technologies that listen and reflect the human mind. I've lived and worked across 60+ countries, letting travel and ephemeral communities shape how I see the world.
                 <br />
                 <br />
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui 
-                ratione voluptatem sequi nesciunt.
+                My experiments are varied: tryptamine biochemistry, building local voice transcription tools that protect privacy, peptide protocols for neuroadaptation, running a marathon in sandals to study biomechanics, fermenting microbiome-specific yogurt as living design. Right now I'm focused on translating grassroots self-experimentation into legitimate scientific frameworks to expand our understanding and application of consciousness-enhancing tools.
+                <br />
+                <br />
+                I thrive in intentional community, and love group movement, meditations, nature immersions and conversations on consciousness, AI, philosophy, and health. I'm a designer of second brains and tools for thought, and an advocate for ethical AI that deepens self-understanding.
+                <br />
+                <br />
+                Each of these is part of my larger inquiry into how the human experiment can be made more beautiful, transparent, and awake.
               </div>
             ) : (
               <div className="space-y-4 mt-6 lg:mt-0">

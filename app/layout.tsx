@@ -12,8 +12,8 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Personal Website",
-  description: "Welcome to my personal website",
+  title: "Jesse Schmidt - Personal Website",
+  description: "Welcome to Jesse Schmidt's personal website",
   icons: {
     icon: [
       { url: '/icon.png', sizes: 'any', type: 'image/png' },

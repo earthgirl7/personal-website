@@ -1,23 +1,12 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaXTwitter, FaThreads } from "react-icons/fa6";
 
 export default function SocialIcons() {
   return (
     <div className="flex space-x-3 mt-4">
       <a
-        href="https://github.com/yourusername"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="transition-colors"
-        style={{ color: '#9ca3af' }}
-        onMouseEnter={(e) => e.currentTarget.style.color = '#4b5563'}
-        onMouseLeave={(e) => e.currentTarget.style.color = '#9ca3af'}
-      >
-        <FaGithub className="text-base" />
-      </a>
-      <a
-        href="https://linkedin.com/in/yourusername"
+        href="https://www.linkedin.com/in/jesse-schmidt/"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-colors"
@@ -28,7 +17,7 @@ export default function SocialIcons() {
         <FaLinkedin className="text-base" />
       </a>
       <a
-        href="https://twitter.com/yourusername"
+        href="https://x.com/js_neuropsych"
         target="_blank"
         rel="noopener noreferrer"
         className="transition-colors"
@@ -36,7 +25,18 @@ export default function SocialIcons() {
         onMouseEnter={(e) => e.currentTarget.style.color = '#4b5563'}
         onMouseLeave={(e) => e.currentTarget.style.color = '#9ca3af'}
       >
-        <FaTwitter className="text-base" />
+        <FaXTwitter className="text-base" />
+      </a>
+      <a
+        href="https://www.threads.com/@jesse.schmidt"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-colors"
+        style={{ color: '#9ca3af' }}
+        onMouseEnter={(e) => e.currentTarget.style.color = '#4b5563'}
+        onMouseLeave={(e) => e.currentTarget.style.color = '#9ca3af'}
+      >
+        <FaThreads className="text-base" />
       </a>
     </div>
   );

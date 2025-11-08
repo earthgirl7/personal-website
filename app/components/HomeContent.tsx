@@ -143,16 +143,16 @@ export default function HomeContent({ blogData }: HomeContentProps) {
                 Hi, this is me, Jesse.
                 <br />
                 <br />
-                I'm a human being who moves between worlds. I'm drawn to paradox -- the ever expanding point between science and spirit, logic and intuition, art and analysis. My work synthesizes these tensions into practice, building frameworks for consciousness exploration and embodied intelligence.
+                I&apos;m a human being who moves between worlds. I&apos;m drawn to paradox -- the ever expanding point between science and spirit, logic and intuition, art and analysis. My work synthesizes these tensions into practice, building frameworks for consciousness exploration and embodied intelligence.
                 <br />
                 <br />
-                I studied neuroscience and psychoactive drug research, later earning a master's in international business. I've spoken on psychedelics, AI, and consciousness, and helped build technologies that listen and reflect the human mind. I've lived and worked across 60+ countries, letting travel and ephemeral communities shape how I see the world.
+                I studied neuroscience and psychoactive drug research, later earning a master&apos;s in international business. I&apos;ve spoken on psychedelics, AI, and consciousness, and helped build technologies that listen and reflect the human mind. I&apos;ve lived and worked across 60+ countries, letting travel and ephemeral communities shape how I see the world.
                 <br />
                 <br />
-                My experiments are varied: tryptamine biochemistry, building local voice transcription tools that protect privacy, peptide protocols for neuroadaptation, running a marathon in sandals to study biomechanics, fermenting microbiome-specific yogurt as living design. Right now I'm focused on translating grassroots self-experimentation into legitimate scientific frameworks to expand our understanding and application of consciousness-enhancing tools.
+                My experiments are varied: tryptamine biochemistry, building local voice transcription tools that protect privacy, peptide protocols for neuroadaptation, running a marathon in sandals to study biomechanics, fermenting microbiome-specific yogurt as living design. Right now I&apos;m focused on translating grassroots self-experimentation into legitimate scientific frameworks to expand our understanding and application of consciousness-enhancing tools.
                 <br />
                 <br />
-                I thrive in intentional community, and love group movement, meditations, nature immersions and conversations on consciousness, AI, philosophy, and health. I'm a designer of second brains and tools for thought, and an advocate for ethical AI that deepens self-understanding.
+                I thrive in intentional community, and love group movement, meditations, nature immersions and conversations on consciousness, AI, philosophy, and health. I&apos;m a designer of second brains and tools for thought, and an advocate for ethical AI that deepens self-understanding.
                 <br />
                 <br />
                 Each of these is part of my larger inquiry into how the human experiment can be made more beautiful, transparent, and awake.

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
-import StickyDotCursor from "./components/StickyDotCursor";
 import ClientOnly from "./components/ClientOnly";
 
 const notoSans = Noto_Sans({
@@ -33,7 +32,6 @@ export default function RootLayout({
       <body className={notoSans.className} style={{ backgroundColor: 'white' }}>
         <ClientOnly>
           {children}
-          <StickyDotCursor />
         </ClientOnly>
       </body>
     </html>

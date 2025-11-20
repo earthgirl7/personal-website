@@ -1,32 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function FivePage() {
-  // Disable the sticky dot cursor on this page
-  useEffect(() => {
-    // Hide the sticky dot cursor
-    const cursor = document.querySelector('.fixed.w-3.h-3.rounded-full') as HTMLElement
-    if (cursor) {
-      cursor.style.display = 'none'
-    }
-
-    // Also hide by adding a style rule
-    const style = document.createElement('style')
-    style.innerHTML = `
-      .fixed.w-3.h-3.rounded-full {
-        display: none !important;
-      }
-    `
-    document.head.appendChild(style)
-
-    return () => {
-      if (cursor) {
-        cursor.style.display = ''
-      }
-      document.head.removeChild(style)
-    }
-  }, [])
   const [password, setPassword] = useState('')
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [error, setError] = useState(false)

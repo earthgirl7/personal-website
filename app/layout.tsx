@@ -10,6 +10,7 @@ const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
 });
 
+// No cursor component - cursor removed
 export const metadata: Metadata = {
   title: "Jesse Schmidt - Personal Website",
   description: "Welcome to Jesse Schmidt's personal website",

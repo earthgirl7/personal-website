@@ -250,10 +250,14 @@ export default function SupportPage() {
           padding-top: 22px;
         }
 
+        .support-signature-image {
+          margin-top: 12px;
+          margin-bottom: 4px;
+        }
+
         .support-signature-name {
           font-style: italic;
           font-size: 18px;
-          margin-top: 8px;
         }
 
         .support-signature-block {
@@ -429,6 +433,13 @@ export default function SupportPage() {
             <div className="support-content">
               <p>If this resonates, I&apos;d be glad to connect.</p>
               <p style={{ marginTop: '20px' }}>Best,</p>
+              <Image
+                src="/signature.png"
+                alt="Jesse's signature"
+                width={120}
+                height={50}
+                className="support-signature-image"
+              />
               <p className="support-signature-name">Jesse</p>
             </div>
 

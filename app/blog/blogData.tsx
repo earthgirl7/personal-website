@@ -8,7 +8,11 @@ const blogDirectory = path.join(process.cwd(), "app", "blog", "blogposts");
 
 // fetches blog data from markdown files in blogposts folder
 const getBlogData = () => {
-  const fileNames = fs.readdirSync(blogDirectory);
+  const fileNames = fs.readdirSync(blogDirectory).filter(f => f.endsWith('.md'));
+
+  if (fileNames.length === 0) {
+    return [];
+  }
 
   const blogsData = fileNames.map((fileName) => {
     const fullPath = path.join(blogDirectory, fileName);

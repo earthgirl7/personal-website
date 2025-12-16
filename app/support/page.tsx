@@ -1,9 +1,6 @@
-import Image from "next/image";
+"use client";
 
-export const metadata = {
-  title: "Bridge Funding for Psychedelic Research",
-  description: "Supporting continuity in psychedelic research during a funding gap",
-};
+import Image from "next/image";
 
 export default function SupportPage() {
   return (

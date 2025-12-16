@@ -302,9 +302,6 @@ export default function SupportPage() {
         <main className="support-card">
           <header className="support-header">
             <div className="support-header-main">
-              <div className="support-badge-row">
-                <span className="support-badge">UCSF &bull; Carhart-Harris Lab</span>
-              </div>
               <h1>Bridge Funding for Psychedelic Research</h1>
               <p className="support-subtitle">
                 Supporting continuity in psychedelic research during a funding gap

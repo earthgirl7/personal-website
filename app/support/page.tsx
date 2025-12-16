@@ -431,7 +431,7 @@ export default function SupportPage() {
 
           <section className="support-section support-closing">
             <div className="support-content">
-              <p>If this resonates, I&apos;d be glad to connect.</p>
+              <p>If this resonates, reach out — I&apos;m happy to answer questions or discuss further.</p>
               <p style={{ marginTop: '20px' }}>Best,</p>
               <Image
                 src="/signature.png"

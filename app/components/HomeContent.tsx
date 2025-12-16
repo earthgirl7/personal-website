@@ -140,19 +140,22 @@ export default function HomeContent({ blogData }: HomeContentProps) {
           <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
             {activeTab === "about" ? (
               <div className="text-base font-light leading-relaxed text-gray-900">
-                Hi, this is me, Jesse.
+                Hi, I&apos;m Jesse.
                 <br />
                 <br />
-                I&apos;m a human being who moves between worlds. I&apos;m drawn to paradox -- the ever expanding point between science and spirit, logic and intuition, art and analysis. My work synthesizes these tensions into practice, building frameworks for consciousness exploration and embodied intelligence.
+                I work at the intersection of psychedelic science, consciousness research, and structured self-experimentation—translating grassroots experimentation with psychoactive tools into rigorous, ethical research frameworks.
                 <br />
                 <br />
-                I studied neuroscience and psychoactive drug research, later earning a master&apos;s in international business. I&apos;ve spoken on psychedelics, AI, and consciousness, and helped build technologies that listen and reflect the human mind. I&apos;ve lived and worked across 60+ countries, letting travel and ephemeral communities shape how I see the world.
+                I&apos;m drawn to paradox: the ever-expanding point between science and spirit, logic and intuition, direct experience and formal knowledge. My work synthesizes these tensions into practice.
                 <br />
                 <br />
-                My experiments are varied: tryptamine biochemistry, building local voice transcription tools that protect privacy, peptide protocols for neuroadaptation, running a marathon in sandals to study biomechanics, fermenting microbiome-specific yogurt as living design. Right now I&apos;m focused on translating grassroots self-experimentation into legitimate scientific frameworks to expand our understanding and application of consciousness-enhancing tools.
+                I studied neuroscience and psychoactive drug research, later earning a master&apos;s in international business. I&apos;ve spoken on psychedelics, AI, and consciousness, and helped build technologies that listen to and reflect the human mind. I&apos;ve lived and worked across 60+ countries, often within intentional communities that shaped how I understand altered states and collective meaning-making.
                 <br />
                 <br />
-                I thrive in intentional community, and love group movement, meditations, nature immersions and conversations on consciousness, AI, philosophy, and health. I&apos;m a designer of second brains and tools for thought, and an advocate for ethical AI that deepens self-understanding.
+                My experiments are varied: tryptamine biochemistry, privacy-preserving voice analysis, peptide protocols for neuroadaptation, embodied investigations into biomechanics and physiology. Right now I&apos;m focused on building bridges between informal self-experimentation and formal research—developing protocols and datasets that make these explorations legible to academic and clinical institutions without stripping them of nuance.
+                <br />
+                <br />
+                I thrive in intentional community and collaborative research environments. At heart, I&apos;m interested in how we design systems—scientific, technological, and social—that help humans understand themselves more clearly.
                 <br />
                 <br />
                 Each of these is part of my larger inquiry into how the human experiment can be made more beautiful, transparent, and awake.

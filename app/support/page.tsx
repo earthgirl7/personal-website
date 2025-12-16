@@ -180,6 +180,16 @@ export default function SupportPage() {
           transform: translateY(-1px);
         }
 
+        .support-option-featured {
+          border-color: rgba(5, 32, 73, 0.25);
+          background: linear-gradient(135deg, #fafbfd 0%, #f5f7fb 100%);
+          box-shadow: 0 4px 12px rgba(5, 32, 73, 0.06);
+        }
+
+        .support-option-featured:hover {
+          border-color: rgba(5, 32, 73, 0.45);
+        }
+
         .support-option-title {
           font-size: 13px;
           font-weight: 600;
@@ -233,6 +243,23 @@ export default function SupportPage() {
           font-weight: 500;
           color: #052049;
           white-space: nowrap;
+        }
+
+        .support-cta {
+          display: inline-block;
+          background: #052049;
+          color: #ffffff;
+          padding: 12px 28px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 500;
+          text-decoration: none;
+          transition: background 0.2s ease, transform 0.15s ease;
+        }
+
+        .support-cta:hover {
+          background: #0a3270;
+          transform: translateY(-1px);
         }
 
         @media (max-width: 720px) {
@@ -327,8 +354,8 @@ export default function SupportPage() {
               </p>
               <p>In practical terms, your support helps ensure:</p>
               <ul>
-                <li>Continuity in protocol development during a funding transition</li>
-                <li>Timely advancement of psychometric and phenomenological measurement work</li>
+                <li>Completion of the first 5-MeO-DMT protocol integrating multimodal neuroimaging</li>
+                <li>Continuity in the global psychedelic outcomes survey during a critical phase in development</li>
                 <li>Sustained involvement of an early-career researcher in a field with limited structural support</li>
                 <li>Contribution to work defining how psychedelic outcomes are measured and compared across programs</li>
               </ul>
@@ -347,7 +374,7 @@ export default function SupportPage() {
                 </p>
               </article>
 
-              <article className="support-option">
+              <article className="support-option support-option-featured">
                 <h3 className="support-option-title">Fellowship Support</h3>
                 <div className="support-option-amount">$25–40K</div>
                 <p className="support-option-desc">
@@ -379,10 +406,19 @@ export default function SupportPage() {
                 protocol development, manuscripts, and PhD applications. Supporters receive periodic updates on the
                 research as it develops.
               </p>
+            </div>
+          </section>
+
+          <section className="support-section">
+            <h2 className="support-section-title">Get in Touch</h2>
+            <div className="support-content">
               <p>
-                If this work resonates, I&apos;m happy to talk further or answer questions directly.
+                If this work resonates, I&apos;d welcome the chance to talk further and answer any questions directly.
               </p>
-              <p><strong>-Jesse</strong></p>
+              <p style={{ marginTop: '16px' }}>
+                <a href="mailto:jesse.schmidt@ucsf.edu" className="support-cta">Reach Out</a>
+              </p>
+              <p style={{ marginTop: '16px' }}><strong>—Jesse</strong></p>
             </div>
           </section>
 

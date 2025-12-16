@@ -159,20 +159,24 @@ export default function HomeContent({ blogData }: HomeContentProps) {
               </div>
             ) : (
               <div className="space-y-4 mt-6 lg:mt-0">
-                {visibleBlogData.map((post) => (
-                  <button
-                    key={post.id}
-                    onClick={() => handlePostClick(post)}
-                    className="flex justify-between items-baseline group w-full text-left"
-                  >
-                    <span className="text-base font-light text-gray-900 group-hover:font-semibold flex-1 mr-4">
-                      {post.title}
-                    </span>
-                    <span className="text-xs font-light text-gray-500 whitespace-nowrap flex-shrink-0 group-hover:font-semibold">
-                      {post.date}
-                    </span>
-                  </button>
-                ))}
+                {visibleBlogData.length === 0 ? (
+                  <p className="text-base font-light text-gray-500">Coming soon</p>
+                ) : (
+                  visibleBlogData.map((post) => (
+                    <button
+                      key={post.id}
+                      onClick={() => handlePostClick(post)}
+                      className="flex justify-between items-baseline group w-full text-left"
+                    >
+                      <span className="text-base font-light text-gray-900 group-hover:font-semibold flex-1 mr-4">
+                        {post.title}
+                      </span>
+                      <span className="text-xs font-light text-gray-500 whitespace-nowrap flex-shrink-0 group-hover:font-semibold">
+                        {post.date}
+                      </span>
+                    </button>
+                  ))
+                )}
               </div>
             )}
           </div>

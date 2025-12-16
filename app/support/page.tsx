@@ -33,6 +33,16 @@ export default function SupportPage() {
           position: relative;
         }
 
+        .support-card::before {
+          content: "";
+          position: absolute;
+          left: 32px;
+          right: 32px;
+          top: 0;
+          height: 3px;
+          border-radius: 999px;
+          background: linear-gradient(90deg, #052049, #fdb515);
+        }
 
         .support-header {
           display: flex;
@@ -235,6 +245,22 @@ export default function SupportPage() {
           white-space: nowrap;
         }
 
+        .support-cta {
+          display: inline-block;
+          background: #052049;
+          color: #ffffff;
+          padding: 12px 28px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 500;
+          text-decoration: none;
+          transition: background 0.2s ease, transform 0.15s ease;
+        }
+
+        .support-cta:hover {
+          background: #0a3270;
+          transform: translateY(-1px);
+        }
 
         @media (max-width: 720px) {
           .support-card {
@@ -384,19 +410,34 @@ export default function SupportPage() {
           </section>
 
           <section className="support-section">
+            <h2 className="support-section-title">Get in Touch</h2>
             <div className="support-content">
               <p>
-                If this resonates, I&apos;d welcome the chance to discuss further.
+                If this work resonates, I&apos;d welcome the chance to talk further and answer any questions directly.
               </p>
-              <p style={{ marginTop: '20px' }}>
-                <strong>Jesse Schmidt</strong><br />
-                Research Associate, Carhart-Harris Lab<br />
-                University of California, San Francisco<br />
-                <a href="mailto:jesse.schmidt@ucsf.edu" style={{ color: '#052049' }}>jesse.schmidt@ucsf.edu</a> · 727-710-0037
+              <p style={{ marginTop: '16px' }}>
+                <a href="mailto:jesse.schmidt@ucsf.edu" className="support-cta">Reach Out</a>
               </p>
+              <p style={{ marginTop: '16px' }}><strong>—Jesse</strong></p>
             </div>
           </section>
 
+          <footer className="support-footer">
+            <div className="support-footer-left">
+              <Image
+                src="/profile.jpg"
+                alt="Portrait of Jesse Schmidt"
+                width={72}
+                height={72}
+                className="support-profile-photo support-footer-photo"
+              />
+              <div className="support-footer-text">
+                <div className="support-contact">
+                  Jesse Schmidt &middot; jesse.schmidt@ucsf.edu &middot; 727-710-0037
+                </div>
+              </div>
+            </div>
+          </footer>
         </main>
       </div>
     </>

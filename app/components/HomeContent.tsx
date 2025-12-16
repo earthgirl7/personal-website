@@ -140,22 +140,24 @@ export default function HomeContent({ blogData }: HomeContentProps) {
           <div className="flex-[1.5] w-full lg:w-auto lg:pr-16">
             {activeTab === "about" ? (
               <div className="text-base font-light leading-relaxed text-gray-900">
-                Hi, I&apos;m Jesse.
+                <strong>Hi, I&apos;m Jesse.</strong>
                 <br />
                 <br />
-                I work at the intersection of psychedelic science, consciousness research, and structured self-experimentation—translating grassroots experimentation with psychoactive tools into rigorous, ethical research frameworks.
+                I study consciousness as both an experience and an object of inquiry.
                 <br />
                 <br />
-                I&apos;m drawn to paradox: the ever-expanding point between science and spirit, logic and intuition, direct experience and formal knowledge. My work synthesizes these tensions into practice.
+                I&apos;m drawn to the ever-expanding point between science and spirit, direct experience and formal knowledge, art and analysis.
+                <hr className="my-6 border-gray-200" />
+                Right now, I&apos;m focused on bringing grassroots psychedelic experimentation into formal research, developing measurement tools that honor lived experience while meeting scientific standards, in collaboration with academic research groups studying altered states.
                 <br />
                 <br />
-                I studied neuroscience and psychoactive drug research, later earning a master&apos;s in international business. I&apos;ve spoken on psychedelics, AI, and consciousness, and helped build technologies that listen to and reflect the human mind. I&apos;ve lived and worked across 60+ countries, often within intentional communities that shaped how I understand altered states and collective meaning-making.
+                I studied neuroscience with an emphasis on psychoactive drugs, later earning a master&apos;s in international business. I&apos;ve spoken publicly on psychedelics, AI, and consciousness, and helped build technologies that listen to and reflect human cognition. I&apos;ve lived and worked across 60+ countries, often within intentional communities that shaped how I understand altered states, collective meaning-making, and embodied ways of knowing.
                 <br />
                 <br />
-                My experiments are varied: tryptamine biochemistry, privacy-preserving voice analysis, peptide protocols for neuroadaptation, embodied investigations into biomechanics and physiology. Right now I&apos;m focused on building bridges between informal self-experimentation and formal research—developing protocols and datasets that make these explorations legible to academic and clinical institutions without stripping them of nuance.
+                My experiments are varied: privacy-preserving voice analysis, tryptamine biochemistry, peptide protocols for neuroadaptation, embodied investigations into biomechanics and physiology. Across these domains, I&apos;m interested in how informal self-experimentation can be studied without being stripped of nuance.
                 <br />
                 <br />
-                I thrive in intentional community and collaborative research environments. At heart, I&apos;m interested in how we design systems—scientific, technological, and social—that help humans understand themselves more clearly.
+                I thrive in collaborative research environments and intentional communities. At heart, I&apos;m interested in how we design systems—scientific, technological, and social—that help humans understand themselves more clearly.
                 <br />
                 <br />
                 Each of these is part of my larger inquiry into how the human experiment can be made more beautiful, transparent, and awake.

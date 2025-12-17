@@ -351,7 +351,7 @@ export default function SupportPage() {
               <div className="support-highlight-label">Bridge Support Need</div>
               <p>
                 <strong>The situation:</strong> My paid UCSF appointment begins in March due to
-                administrative timelines. The role initially supports 25% effort while longer-term
+                administrative timelines. The role initially supports 50% effort while longer-term
                 funding is finalized.
               </p>
               <p>

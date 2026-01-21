@@ -276,7 +276,7 @@ export default function SupportPage() {
             <div className="support-header-main">
               <h1>Continuity Support for Psychedelic Research</h1>
               <p className="support-intro">
-                I&apos;m asking for bridge support to stay focused on this work through April.
+                Bridging months of unpaid research work
               </p>
             </div>
           </header>
@@ -306,7 +306,7 @@ export default function SupportPage() {
                 The foundational questions remain open: What should we measure? What counts as change? How do we compare experiences across different contexts?
               </p>
               <p>
-                I&apos;ve been working with the lab as a volunteer since last July. My paid UCSF appointment begins in April. I&apos;m asking for bridge support to stay in San Francisco and maintain full-time focus until then.
+                I&apos;ve been doing this work unpaid since last July. My paid position starts in April. I&apos;m asking for support to stay in SF and maintain full-time focus until then.
               </p>
             </div>
 

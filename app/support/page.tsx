@@ -57,41 +57,19 @@ export default function SupportPage() {
           flex: 1;
         }
 
-        .support-badge-row {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-bottom: 10px;
-          font-size: 13px;
-          color: #5e6a71;
-        }
-
-        .support-badge {
-          display: inline-flex;
-          align-items: center;
-          padding: 4px 10px;
-          border-radius: 999px;
-          font-size: 11px;
-          font-weight: 500;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          background: rgba(5, 32, 73, 0.06);
-          color: #052049;
-        }
-
         .support-page h1 {
           font-size: 26px;
           line-height: 1.25;
           font-weight: 600;
           color: #052049;
           letter-spacing: -0.03em;
-          margin-bottom: 6px;
+          margin-bottom: 12px;
         }
 
-        .support-subtitle {
+        .support-intro {
           font-size: 14px;
-          color: #5e6a71;
-          max-width: 460px;
+          line-height: 1.75;
+          color: #28323c;
         }
 
         .support-profile-photo {
@@ -159,6 +137,23 @@ export default function SupportPage() {
           font-size: 14px;
         }
 
+        .support-matter-item {
+          margin-top: 16px;
+        }
+
+        .support-matter-item h3 {
+          font-size: 14px;
+          font-weight: 600;
+          color: #052049;
+          margin-bottom: 4px;
+        }
+
+        .support-matter-item p {
+          font-size: 14px;
+          line-height: 1.75;
+          color: #28323c;
+        }
+
         .support-options {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -210,54 +205,9 @@ export default function SupportPage() {
           line-height: 1.6;
         }
 
-        .support-footer {
-          margin-top: 22px;
-          padding-top: 18px;
-          border-top: 1px solid #e5e7eb;
-          font-size: 13px;
-          color: #6b7280;
-          display: flex;
-          align-items: flex-start;
-          gap: 14px;
-        }
-
-        .support-footer-left {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-        }
-
-        .support-footer-photo {
-          width: 72px;
-          height: 72px;
-          border-width: 2px;
-        }
-
-        .support-footer-text {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-        }
-
-        .support-contact {
-          font-weight: 500;
-          color: #052049;
-          white-space: nowrap;
-        }
-
         .support-closing {
           border-top: 1px solid #e5e7eb;
           padding-top: 22px;
-        }
-
-        .support-signature-image {
-          margin-top: 12px;
-          margin-bottom: 4px;
-        }
-
-        .support-signature-name {
-          font-style: italic;
-          font-size: 18px;
         }
 
         .support-signature-block {
@@ -285,6 +235,14 @@ export default function SupportPage() {
           margin-bottom: 2px;
         }
 
+        .support-core-note {
+          font-size: 14px;
+          color: #28323c;
+          margin-top: 16px;
+          padding-top: 12px;
+          border-top: 1px solid #e5e7eb;
+        }
+
         @media (max-width: 720px) {
           .support-card {
             padding: 24px 18px 24px;
@@ -298,10 +256,6 @@ export default function SupportPage() {
           .support-options {
             grid-template-columns: 1fr;
           }
-
-          .support-contact {
-            white-space: normal;
-          }
         }
 
         @media (max-width: 480px) {
@@ -313,11 +267,6 @@ export default function SupportPage() {
             width: 96px;
             height: 96px;
           }
-
-          .support-footer-photo {
-            width: 64px;
-            height: 64px;
-          }
         }
       `}</style>
 
@@ -325,60 +274,73 @@ export default function SupportPage() {
         <main className="support-card">
           <header className="support-header">
             <div className="support-header-main">
-              <h1>Bridge Funding for Psychedelic Research</h1>
-              <p className="support-subtitle">
-                Supporting continuity in psychedelic research during a funding gap
+              <h1>Continuity Support for Psychedelic Research</h1>
+              <p className="support-intro">
+                I&apos;m asking for bridge support to stay focused on this work through April.
               </p>
             </div>
           </header>
 
           <section className="support-section">
-            <h2 className="support-section-title">The Context</h2>
+            <h2 className="support-section-title">Context</h2>
             <div className="support-content">
               <p>
-                I&apos;m Jesse, a neuroscience researcher joining the Carhart-Harris Lab at UCSF.
-                I&apos;m contributing to two active research efforts: a standardized psychedelic
-                outcomes cohort integrated with state-regulated programs, and a 5-MeO-DMT
-                clinical protocol focused on psychometric and phenomenological measurement.
+                I&apos;m Jesse Schmidt, a neuroscience researcher joining the Carhart-Harris Lab at UCSF.
               </p>
               <p>
-                My work centers on protocol design, measurement strategy, and developing the
-                data infrastructure required for reproducible psychedelic research.
-              </p>
-            </div>
-
-            <div className="support-highlight-box">
-              <div className="support-highlight-label">Bridge Support Need</div>
-              <p>
-                <strong>The situation:</strong> My paid UCSF appointment begins in March due to
-                administrative timelines. The role initially supports 50% effort while longer-term
-                funding is finalized.
+                I&apos;m building data infrastructure and measurement development for the Global Psychedelic Survey — a large-scale outcomes study integrated with state-regulated programs across the U.S. I also contribute to lab protocol development, including a 5-MeO-DMT clinical study.
               </p>
               <p>
-                <strong>The gap:</strong> To remain onsite in San Francisco and continue work without
-                interruption, I am seeking <strong>$10–20K</strong> in bridge support for January through
-                March. This support enables sustained, full-time contribution during a time-sensitive
-                phase of Cohort 3 and 5-MeO-DMT protocol development.
+                My work focuses on how psychedelic experiences are measured, compared, and understood across different substances, settings, and populations.
               </p>
             </div>
           </section>
 
           <section className="support-section">
-            <h2 className="support-section-title">Why This Matters</h2>
+            <h2 className="support-section-title">Why Independent Support</h2>
             <div className="support-content">
               <p>
-                Psychedelic research is at a transitional moment. State-regulated programs are beginning
-                to generate large-scale data, while clinical protocols and measurement frameworks are
-                still actively being shaped. Decisions made during this phase will influence how outcomes
-                are defined, compared, and interpreted for years to come.
+                The field is expanding rapidly. State programs are generating data while researchers are still designing the measurement frameworks.
               </p>
-              <p>In practical terms, your support helps ensure:</p>
-              <ul>
-                <li>Completion of the first 5-MeO-DMT protocol integrating multimodal neuroimaging</li>
-                <li>Continuity in the global psychedelic outcomes survey during a critical phase in development</li>
-                <li>Sustained involvement of an early-career researcher in a field with limited structural support</li>
-                <li>Contribution to work defining how psychedelic outcomes are measured and compared across programs</li>
-              </ul>
+              <p>
+                The foundational questions remain open: What should we measure? What counts as change? How do we compare experiences across different contexts?
+              </p>
+              <p>
+                I&apos;ve been working with the lab as a volunteer since last July. My paid UCSF appointment begins in April. I&apos;m asking for bridge support to stay in San Francisco and maintain full-time focus until then.
+              </p>
+            </div>
+
+            <div className="support-highlight-box">
+              <div className="support-highlight-label">Note</div>
+              <p>
+                Support is provided directly to me as an independent researcher and does not fund UCSF.
+              </p>
+            </div>
+          </section>
+
+          <section className="support-section">
+            <h2 className="support-section-title">Why This Work Matters</h2>
+            <div className="support-content">
+              <p>This research addresses three things the field needs:</p>
+
+              <div className="support-matter-item">
+                <h3>Move beyond blunt mental-health tools</h3>
+                <p>Psychedelics let people step off SSRIs, not just add another medication. But we need better frameworks for understanding non-chronic interventions.</p>
+              </div>
+
+              <div className="support-matter-item">
+                <h3>Create a shared language for psychedelic experience</h3>
+                <p>Right now, every study uses different measures. The global survey builds a shared framework so data can actually accumulate across substances, settings, and populations.</p>
+              </div>
+
+              <div className="support-matter-item">
+                <h3>Treat consciousness as data, not noise</h3>
+                <p>Subjective experience is usually treated as measurement error. This work treats it as signal — integrating phenomenology with rigorous measurement so science can engage with it responsibly.</p>
+              </div>
+
+              <p className="support-core-note">
+                This work creates the measurement infrastructure needed to study consciousness as rigorously as we study symptoms.
+              </p>
             </div>
           </section>
 
@@ -386,29 +348,26 @@ export default function SupportPage() {
             <h2 className="support-section-title">Ways to Support</h2>
             <div className="support-options">
               <article className="support-option">
-                <h3 className="support-option-title">Bridge Support</h3>
+                <h3 className="support-option-title">Research Patronage — Bridge Phase</h3>
                 <div className="support-option-amount">$10–15K</div>
                 <p className="support-option-desc">
-                  Supports living costs from January through March and allows uninterrupted full-time
-                  research during the transition period. Includes periodic updates on study progress.
+                  Supports protected research time during protocol and measurement development. Includes periodic updates.
                 </p>
               </article>
 
               <article className="support-option support-option-featured">
-                <h3 className="support-option-title">Fellowship Support</h3>
+                <h3 className="support-option-title">Research Patronage — Fellowship Phase</h3>
                 <div className="support-option-amount">$25–40K</div>
                 <p className="support-option-desc">
-                  Extends the support window, enables conference travel, and allows deeper engagement with
-                  measurement development. Includes regular updates and the option for a private briefing.
+                  Extends protected time for deeper synthesis, writing, and dissemination. Includes updates and a private briefing.
                 </p>
               </article>
 
               <article className="support-option">
-                <h3 className="support-option-title">Named Fund</h3>
+                <h3 className="support-option-title">Named Research Patronage</h3>
                 <div className="support-option-amount">$100K+</div>
                 <p className="support-option-desc">
-                  Establishes a multi-year support structure for psychedelic neuroscience research.
-                  Includes periodic presentations and long-term recognition.
+                  Establishes a longer-term patron relationship supporting foundational psychedelic research and measurement.
                 </p>
               </article>
             </div>
@@ -418,29 +377,18 @@ export default function SupportPage() {
             <h2 className="support-section-title">What Happens Next</h2>
             <div className="support-content">
               <p>
-                <strong>January–March:</strong> Full-time contribution to protocol design, psychometric development,
-                and the global outcomes infrastructure (Cohort 3) while remaining in San Francisco.
+                <strong>January–April:</strong> Focused work on protocol design, psychometrics, and the global outcomes infrastructure.
               </p>
               <p>
-                <strong>March onward:</strong> Transition to a paid UCSF research appointment, with continued work on
-                protocol development, manuscripts, and PhD applications. Supporters receive periodic updates on the
-                research as it develops.
+                <strong>April onward:</strong> Transition to a paid UCSF appointment, with continued research, writing, and PhD applications. Supporters receive periodic updates.
               </p>
             </div>
           </section>
 
           <section className="support-section support-closing">
             <div className="support-content">
-              <p>If this resonates, reach out — I&apos;m happy to answer questions or discuss further.</p>
-              <p style={{ marginTop: '20px' }}>Best,</p>
-              <Image
-                src="/signature.png"
-                alt="Jesse's signature"
-                width={120}
-                height={50}
-                className="support-signature-image"
-              />
-              <p className="support-signature-name">Jesse</p>
+              <p>If this resonates — or if you have questions — I&apos;d love to talk. I&apos;m also happy to connect you with Robin or others in the lab if that&apos;s helpful.</p>
+              <p style={{ marginTop: '20px' }}>Jesse</p>
             </div>
 
             <div className="support-signature-block">
